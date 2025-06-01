@@ -421,7 +421,7 @@ background: #fdfdfd; /* optional: helps visibility */
 
 
 div.outro-top:before {
-  content: "";position: absolute;left: -.77rem; top: -.9rem;height: 5px;width: 112.9%;border-top: 3px solid var(--secondary-color);
+  content: "";position: absolute;left: -.77rem; top: -.9rem;height: 5px; width: 112.9% ;border-top: 3px solid var(--secondary-color);
 }
 
 div.outro-right:before {
@@ -435,7 +435,7 @@ div.outro-left:before {
   content: "";position: absolute;left:5.5rem;top: 3.1rem;height: 1.5rem; width: 50%;border-right: 3px solid var(--primary-color);
 }
 div.outro-bottom:before {
-  content: "";position: absolute;left: -.035rem;top: 4.55rem;height: 5px;width: 106.7%;border-top: 3px solid var(--primary-color);
+  content: "";position: absolute;left: -.035rem;top: 4.55rem;height: 5px;width: 106.7% ;border-top: 3px solid var(--primary-color);
 }
 
 /* Responsive adjustments */
