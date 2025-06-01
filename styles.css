@@ -390,8 +390,8 @@ background: #fdfdfd; /* optional: helps visibility */
   font-style: italic;
   font-weight: 900;
   right: absolute;    
-  margin-top: -.5rem;
-    margin-right: .15rem;
+  margin-top: -.39rem;
+  margin-right: .14rem;
   z-index: 0;
   color: black;
   text-decoration: ;
@@ -430,10 +430,10 @@ div.outro-left2:before {
 }
 
 div.outro-left:before {
-  content: "";position: absolute;left:5.5rem;top: 3.25rem;height: 1.5rem; width: 50%;border-right: 3px solid var(--primary-color);
+  content: "";position: absolute;left:5.5rem;top: 3.2rem;height: 1.5rem; width: 50%;border-right: 3px solid var(--primary-color);
 }
 div.outro-bottom:before {
-  content: "";position: absolute;left: .32rem;top: 4.55rem;height: 5px;width: 100%;border-top: 3px solid var(--primary-color);
+  content: "";position: absolute;left: .32rem;top: 4.55rem;height: 5px;width: 100%;border-top: 3.4px solid var(--primary-color);
 }
 
 /* Responsive adjustments */
