@@ -1,0 +1,1662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles2.css">
+    <title>Document</title>
+</head>
+<style>
+    .section-header {
+        cursor: pointer;
+        position: relative;
+        user-select: none;
+        margin-bottom: .6rem;
+    }
+    
+    .section-header::after {
+        content: '+';
+        position: absolute;
+        left: -2rem;
+        right: 100;
+        top: 60%;
+        transform: translateY(-50%);
+        font-size: 2rem;
+        font-weight: bold;
+        transition: transform 0.3s ease;
+    }
+    
+    .section-header.expanded::after {
+        content: '−';
+    }
+    
+    .section-content {
+        overflow: hidden;
+        transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+        max-height: 0;
+        opacity: 0;
+    }
+    
+    .section-content.expanded {
+        max-height: none; /* Increased for longer sections */
+        opacity: 1;
+    }
+    
+    .section-header:hover {
+        opacity: 0.8;
+    }
+    
+    /* Fix for floating element in achievements section */
+    .achievements .section-content:not(.expanded) .writing-item {
+        display: none;
+    }
+    
+    .section-content::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+</style>
+<body>
+<main class="cv-container">
+    <header class="cv-header">
+      <h1>AUSTIN KILLIPS</h1>
+    <h3>digital repository</h3>
+    </header>  
+   
+    <section class="headpopout">
+    <a href="mailto:hello@austinkillips.com" class="secondstyle contact-email" >hello@austinkillips.com</a> 
+    </section>
+
+    <br>
+    
+    <section class="intro">
+      <p class="borderbox"> Hi, <br>my name is Austin <br> and this is a collection <br>of things I have done.&#20&#20</p>
+    <div class="top"></div>
+    <div class="bottom"></div>
+    <div class="left"></div>
+    <div class="left2"></div>
+    <div class="right"></div>
+    </section>
+
+
+        <section class="achievements">
+            <h2 class="section-header" data-section="achievements">Achievements</h2>
+            <div class="section-content" id="achievements-content">
+
+            <div class="timeline-item">
+                <div class="year">
+                    <time datetime="2022">2022</time>
+                </div>
+                <div class="center-column">
+                    <h3 class="notable-achievement"> 
+                        <div class="item">'nice bikes' co-founder</div>
+                        <div class="description" style="line-height: 1.2;">Professional bike racing team & LGBTQ inclusion project</div>
+                    </div>
+                    <div class="source-link">
+                        <div class="link"><a href="https://nicebikes.org">SOURCE</a></div>
+                    </div>
+              </div>
+              <div class="timeline-item">
+                <div class="year">
+                    <time datetime="2024">2024</time>
+                </div>
+                <div class="center-column">
+                    <h3 class="notable-achievement">
+                        <div class="item">Fastest Known Time - Tour Divide</div>
+                        <div class="description">all time women's record for riding from Banff, AB to Antelope Wells, NM</div>
+                    </h3>
+                </div>
+                <div class="source-link">
+                    <div class="link"><a href="https://bikepacking.com/news/austin-killips-tour-divide-fastest/">SOURCE</a></div>
+                </div>
+            </div>
+    
+            <div class="timeline-item">
+                <div class="year">
+                    <time datetime="2024">2024</time>
+                </div>
+                <div class="center-column">
+                    <h3 class="notable-achievement">
+                        <div class="item">Fastest Known Time - Arizona Trail</div>
+                        <div class="description">all time women's record for riding from Arizona - Mexico border to Arizona - Utah Border</div>
+                    </h3>
+                </div>
+                <div class="source-link">
+                     <div class="link"><a href="https://bikepacking.com/news/austin-killips-arizona-trail-800-record/">SOURCE</a></div>
+                </div>
+            </div>
+    
+            <div class="timeline-item">
+                <div class="year">
+                    <time datetime="2023">2023</time>
+                </div>
+                <div class="center-column">
+                    <h3 class="notable-achievement">
+                        <div class="item">Tour of the Gila Winner</div>
+                        <div class="description">the highest level cycling stage race in the United States</div>
+                    </h3>
+                </div>
+                 <div class="source-link">
+                     <div class="link"><a href="https://tourofthegila.com/2023/05/2023-tour-of-the-gila-concludes-uci-women-press-release-stage-5/">SOURCE</a></div>
+                </div>
+            </div>
+    
+            <div class="timeline-item">
+                <div class="year">
+                    <time datetime="2023">2023</time>
+                </div>
+                <div class="center-column">
+                    <h3 class="notable-achievement">
+                        <div class="item">First trans woman to win a UCI Road Stage Race</div>
+                        <div class="description">hopefully not the last</div>
+                    </h3>
+                </div>
+                <div class="source-link">
+                    <div class="link"><a href="https://www.bbc.com/sport/cycling/65456752">SOURCE</a></div>
+                </div>
+            </div>
+    
+            <div class="timeline-item">
+                <div class="year">
+                    <time datetime="2023">2023</time>
+                </div>
+                <div class="center-column">
+                    <h3 class="notable-achievement">
+                        <div class="item">Catalyst for cycling ban on transgender athletes</div>
+                        <div class="description">In 2023 my participation was the impetus
+                            for the international governing body of cycling's ban on transgender athletes</div>
+                    </h3>
+                </div>
+                <div class="source-link">
+                    <div class="link"><a href="https://apnews.com/article/cycling-transgender-uci-3ecf0d7ea19ee11fb809be5c3af6d526">SOURCE</a></div>
+                </div>
+            </div>
+    
+            <div class="timeline-item">
+                <div class="year">
+                    <time datetime="2025">2025</time>
+                </div>
+                <div class="center-column">
+                    <h3 class="notable-achievement">
+                        <div class="item">Mentioned in State of the Union Address</div>
+                        <div class="description">cited as "very bad for the country" at the State of the Union!</div>
+                    </h3>
+                </div>
+                <div class="source-link">
+                    <div class="link"><a href="https://www.youtube.com/watch?v=bCBvdSFC2Ps">SOURCE</a></div>
+                </div>
+            </div>
+
+            <div class="writing-item">
+                <div class="year"></div>
+                <div class="details">
+                  <div class="title" style="border-top: 2px solid var(--primary-color); 
+                                      border-right: 2px solid var(--primary-color);
+                                      border-left: 2px solid var(--primary-color);                                      
+                                      padding: 10px; 
+                                      float: right; 
+                                      margin-left: rem; 
+                                      margin-right: 0;
+                                      margin-bottom: 0rem;
+                                      max-width: 100%;
+                                      min-width: 10%; 
+                                      box-sizing: border-box; 
+                                      line-height: 1;
+                                      display: block;">I was the first<br> trans woman<br> to do a few <br> notable things.<br></div>
+            <!-- Clear float if needed -->
+            <div style="clear: both;"></div>
+                </div>
+                </div>
+    </section>
+
+    <section class="writing">
+        <h2 class="section-header" data-section="writing">Writing</h2>
+        <div class="section-content" id="writing-content">
+
+        <div class="timeline-item">
+          <div class="year">
+            <time datetime="2025">2025</time>
+          </div>
+          <div class="center-column">
+            <h3 class="written-work">
+                <div class="item">A poem about cruising, an essay about (John) Berger</div>
+                <div class="description">Transplants Magazine #3 - prose, essay, mixed media collage</div>
+            </h3>
+        </div>
+        <div class="source-link">
+            <div class="link"><a href="https://asterolsen.com/transplants-zine/issues/">LINK</a></div>
+        </div>
+    </div>
+
+    <div class="timeline-item">
+        <div class="year">
+            <time datetime="2025">2025</time>
+        </div>
+        <div class="center-column">
+            <h3 class="written-work">
+                <div class="item">The Great Southern Country Film Review and Interview with Filmmaker Gus Morton</div>
+                <div class="description">The Radavist - film review & director interview</div>
+            </h3>
+        </div>
+        <div class="source-link">
+            <div class="link"><a href="https://theradavist.com/the-great-southern-country-film-review-and-interview-with-filmmaker-gus-morton/#meta">LINK</a></div>
+        </div>
+    </div>
+
+    <div class="timeline-item">
+        <div class="year">
+            <time datetime="2025">2025</time>
+        </div>
+        <div class="center-column">
+            <h3 class="written-work">
+                <div class="item">"I'm Terrified ": Trans-Feminine Athletes in Their Own Words</div>
+                <div class="description">The Nation contribution</div>
+            </h3>
+        </div>
+        <div class="source-link">
+            <div class="link"><a href="https://www.thenation.com/article/society/trans-women-athletes-forum/">LINK</a></div>
+        </div>
+    </div>
+
+    <div class="timeline-item">
+        <div class="year">
+            <time datetime="2025">2025</time>
+        </div>
+        <div class="center-column">
+            <h3 class="written-work">
+                <div class="item">Trump singled me out for ruining women's sport</div>
+                <div class="description">The Guardian op-ed</div>
+            </h3>
+        </div>
+        <div class="source-link">
+            <div class="link"><a href="https://www.theguardian.com/sport/commentisfree/2025/feb/20/trump-trans-women-sport-austin-killips">LINK</a></div>
+        </div>
+    </div>
+
+    <div class="timeline-item">
+        <div class="year">
+            <time datetime="2025">2025</time>
+        </div>
+        <div class="center-column">
+            <h3 class="written-work">
+                <div class="item">Visibility (and its consequences)</div>
+                <div class="description">self published - essay</div>
+            </h3>
+        </div>
+        <div class="source-link">
+            <div class="link"><a href="https://www.patreon.com/posts/125648029/">LINK</a></div>
+        </div>
+    </div>
+
+    <div class="timeline-item">
+        <div class="year">
+            <time datetime="2025">2025</time>
+        </div>
+        <div class="center-column">
+            <h3 class="written-work">
+                <div class="item">A poem about cruising, an essay about (John) Berger</div>
+                <div class="description">self published - essay</div>
+            </h3>
+        </div>
+        <div class="source-link">
+            <div class="link"><a href="https://www.patreon.com/posts/119232013">LINK</a></div>
+        </div>
+    </div>
+
+    <div class="timeline-item">
+        <div class="year">
+            <time datetime="2024">2024</time>
+        </div>
+        <div class="center-column">
+            <h3 class="written-work">
+                <div class="item">On The Glorification of Suffering And Solitude: Reflections from the Arizona Trail</div>
+                <div class="description">self published - essay</div>
+            </h3>
+        </div>
+        <div class="source-link">
+            <div class="link"><a href="https://www.patreon.com/posts/105717276">LINK</a></div>
+        </div>
+    </div>
+
+    <div class="timeline-item">
+        <div class="year">
+            <time datetime="2024">2024</time>
+        </div>
+        <div class="center-column">
+            <h3 class="written-work">
+                <div class="item">Notes on the Visual Language of Home Movies</div>
+                <div class="description">self published - essay</div>
+            </h3>
+        </div>
+        <div class="source-link">
+            <div class="link"><a href="https://www.patreon.com/posts/101304383">LINK</a></div>
+        </div>
+    </div>
+
+    <div class="timeline-item">
+        <div class="year">
+            <time datetime="2024">2024</time>
+        </div>
+        <div class="center-column">
+            <h3 class="written-work">
+                <div class="item">Cruel Optimism // Disordered Eating</div>
+                <div class="description">self published - essay</div>
+            </h3>
+        </div>
+        <div class="source-link">
+            <div class="link"><a href="https://www.patreon.com/posts/98884316/">LINK</a></div>
+        </div>
+    </div>
+
+    <div class="timeline-item">
+        <div class="year">
+            <time datetime="2024">2024</time>
+        </div>
+        <div class="center-column">
+            <h3 class="written-work">
+                <div class="item">Being-towards death and The Great Ecstasy of the Woodcarver Steiner</div>
+                <div class="description">self published - essay</div>
+            </h3>
+        </div>
+        <div class="source-link">
+            <div class="link"><a href="https://www.patreon.com/posts/94877705/">LINK</a></div>
+        </div>
+    </div>
+
+    <div class="timeline-item">
+        <div class="year">
+            <time datetime="2024">2024</time>
+        </div>
+        <div class="center-column">
+            <h3 class="written-work">
+                <div class="item">A note regarding the UCI Ruling</div>
+                <div class="description">self published - essay</div>
+            </h3>
+        </div>
+        <div class="source-link">
+            <div class="link"><a href="https://www.patreon.com/posts/94880645/">LINK</a></div>
+        </div>
+    </div>
+</section>
+
+<section class="video">
+    <h2 class="section-header" data-section="video">Video Work</h2>
+        <div class="section-content" id="video-content">
+
+  <div class="timeline-item">
+    <div class="year">
+        <time datetime="2025">2025</time>
+    </div>
+    <div class="center-column">
+        <h3 class="video-work">
+            <div class="item">Building for the Body: Mobility Research and Pedagogy in the RISD Department of Industrial Design</div>
+            <div class="description">conference presentation video presented @ Yale University disability symposium</div>
+        </h3>
+    </div> 
+    <div class="source-link">
+    <div class="link"><a href="https://drive.google.com/file/d/1bgh5ZUjj_nFHx_Efs-FN5nt_k-R8Uc8r/view?usp=drive_link">LINK</a></div>
+    </div>
+  </div>
+  <div class="timeline-item">
+    <div class="year">
+      <time datetime="2025">2025</time>
+    </div>
+    <div class="center-column">
+      <h3 class="video-work">
+        <div class="item">Color Study</div>
+        <div class="description">moving image short</div>
+      </h3>
+    </div>
+    <div class="source-link">
+      <div class="link"><a href="https://vimeo.com/1073754716">LINK</a></div>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="year">
+      <time datetime="2025">2025</time>
+    </div>
+    <div class="center-column">
+      <h3 class="video-work">
+        <div class="item">Web Design Motion Study</div>
+        <div class="description">moving image short</div>
+      </h3>
+    </div>
+    <div class="source-link">
+      <div class="link"><a href="https://vimeo.com/1058841086">LINK</a></div>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="year">
+      <time datetime="2025">2025</time>
+    </div>
+    <div class="center-column">
+      <h3 class="video-work">
+        <div class="item">Austin's Guide to Miami</div>
+        <div class="description">moving image short</div>
+      </h3>
+    </div>
+    <div class="source-link">
+      <div class="link"><a href="https://vimeo.com/1072876528">LINK</a></div>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="year">
+      <time datetime="2025">2025</time>
+    </div>
+    <div class="center-column">
+      <h3 class="video-work">
+        <div class="item">Annual New England International World Tournament of Pond Hockey</div>
+        <div class="description">moving image short</div>
+      </h3>
+    </div>
+    <div class="source-link">
+      <div class="link"><a href="https://vimeo.com/1072877549">LINK</a></div>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="year">
+      <time datetime="2024">2024</time>
+    </div>
+    <div class="center-column">
+      <h3 class="video-work">
+        <div class="item">casual encounters</div>
+        <div class="description" style="line-height: 1.4; padding-bottom:.5rem">narrative short film<br>
+          streaming on the <i>Otherness Archive</i><br>
+          screening run with <i>Full Specture Features</i>
+        </div>
+      </h3>
+    </div>
+    <div class="source-link">
+      <div class="link"><a href="https://vimeo.com/1073701928">LINK</a></div>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="year">
+      <time datetime="2024">2024</time>
+    </div>
+    <div class="center-column">
+      <h3 class="video-work">
+        <div class="item">Reflections from a Year of Pedaling OR: Purity of Heart is to Will One Thing</div>
+        <div class="description">moving image short</div>
+      </h3>
+    </div>
+    <div class="source-link">
+      <div class="link"><a href="https://vimeo.com/1036156526">LINK</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="interviews">
+    <h2 class="section-header" data-section="interviews">Interviews and Press</h2>
+    <div class="section-content" id="interviews-content">
+
+    <div class="timeline-item">
+      <div class="year">
+        <time datetime="2024">2024</time>
+    </div>
+      <div class="center-column">
+        <h3 class="published-interviews">
+         <div class="item">Radavist interview with Spencer Harding</div>
+        <div class="description">conversation about setting Tour Divide fastest known time</div>
+    </h3>
+      </div>
+    <div class="source-link">
+        <div class="link"><a href="https://theradavist.com/a-conversation-with-austin-killips/">LINK</a>
+    </div>
+</div>
+</div>
+
+<div class="timeline-item">
+    <div class="year">
+        <time datetime="2024">2024</time>
+    </div>
+    <div class="center-column">
+        <h3 class="published-interviews">
+            <div class="item">League of American Bicyclists interview</div>
+            <div class="description">conversation about inclusion advocacy in cycling</div>
+        </h3>
+    </div>
+    <div class="source-link">
+        <div class="link"><a href="https://bikeleague.org/carving-out-space-with-austin-killips/">LINK</a>
+    </div>
+</div>
+</div>
+
+
+<div class="timeline-item">
+    <div class="year">
+        <time datetime="2024">2024</time>
+    </div>
+    <div class="center-column">
+        <h3 class="published-interviews">
+            <div class="item">Adventure Cycling Magazine interview</div>
+            <div class="description">conversation about setting Tour Divide fastest known time</div>
+        </h3>
+    </div>
+    <div class="source-link">
+        <div class="link"><a href="" style="color: black; background-color: yellow;">(IN PRINT)</a></div>
+    </div>
+</div>
+
+<div class="timeline-item">
+    <div class="year">
+        <time datetime="2024">2024</time>
+    </div>
+    <div class="center-column">
+        <h3 class="published-interviews">
+            <div class="item">Frankie de Le cretaz substack</div>
+            <div class="description">conversation about navigating professional sport in the wake of trans athlete ban</div>
+        </h3>
+    </div>
+    <div class="source-link">
+        <div class="link"><a href="https://www.thefrankiedlc.news/p/cyclist-austin-killips-is-building">LINK</a></div>
+    </div>
+</div>
+
+<div class="timeline-item">
+    <div class="year">
+        <time datetime="2024">2024</time>
+    </div>
+    <div class="center-column">
+        <h3 class="published-interviews">
+            <div class="item">Detours Podcast with Mel Webb</div>
+            <div class="description">conversation about Arizona Trail 800 fastest known time</div>
+        </h3>
+    </div>
+    <div class="source-link">
+        <div class="link"><a href="https://shows.acast.com/detours-an-ultra-cycling-adventure-podcast/episodes/austin-killips-on-her-arizona-trail-fkt">LINK</a></div>
+    </div>
+</div>
+
+<div class="timeline-item">
+    <div class="year">
+        <time datetime="2024">2024</time>
+    </div>
+    <div class="center-column">
+        <h3 class="published-interviews">
+            <div class="item">Cycling News with Laura Weislo</div>
+            <div class="description">conversation about Arizona Trail 800 fastest known time</div>
+        </h3>
+    </div>
+    <div class="source-link">
+        <div class="link"><a href="https://www.cyclingnews.com/features/one-year-on-from-tour-of-the-gila-victory-killips-aiming-for-record-on-arizona-trail/">LINK</a></div>
+    </div>
+</div>
+
+<div class="timeline-item">
+    <div class="year">
+        <time datetime="2023">2023</time>
+    </div>
+    <div class="center-column">
+        <h3 class="published-interviews">
+            <div class="item">Cycling Magazine with Micah Ling</div>
+            <div class="description">conversation about Tour of the Gila and my ultra-racing ambitions</div>
+        </h3>
+    </div>
+    <div class="source-link">
+        <div class="link"><a href="https://www.cyclingnews.com/features/one-year-on-from-tour-of-the-gila-victory-killips-aiming-for-record-on-arizona-trail/">LINK</a></div>
+    </div>
+</div>
+
+<div class="timeline-item">
+    <div class="year">
+        <time datetime="2023">2023</time>
+    </div>
+    <div class="center-column">
+        <h3 class="published-interviews">
+            <div class="item">Knoxville sentinel interview with Cora Hall</div>
+            <div class="description">conversation about the people protesting my participation at the national championship road race</div>
+        </h3>
+    </div>
+    <div class="source-link">
+        <div class="link"><a href="https://www.knoxnews.com/story/sports/local/2023/06/25/austin-killips-trans-woman-controversy-cycling-uci-protest/70354231007/">LINK</a></div>
+    </div>
+</div>
+
+<div class="timeline-item">
+    <div class="year">
+        <time datetime="2023">2023</time>
+    </div>
+    <div class="center-column">
+        <h3 class="published-interviews">
+            <div class="item">Outside interview with Emma Zimmerman</div>
+            <div class="description">conversation about my alternative model for an ultra-endurance racing program</div>
+        </h3>
+    </div>
+    <div class="source-link">
+        <div class="link"><a href="https://www.outsideonline.com/outdoor-adventure/biking/austin-killips-trans-woman-cyclist-tour-gila-belgian-waffle-ride/">LINK</a></div>
+    </div>
+</div>
+
+<div class="timeline-item">
+    <div class="year">
+        <time datetime="2023">2023</time>
+    </div>
+    <div class="center-column">
+        <h3 class="published-interviews">
+            <div class="item">CyclingNews with Kristen Frattini</div>
+            <div class="description">conversation about the response to my Tour of the Gila win</div>
+        </h3>
+    </div>
+    <div class="source-link">
+        <div class="link"><a href="https://www.cyclingnews.com/features/it-is-incredibly-painful-to-be-othered-austin-killips-on-division-debate-and-building-dialogue/">LINK</a></div>
+    </div>
+</div>
+
+<div class="timeline-item">
+    <div class="year">
+        <time datetime="2022">2022</time>
+    </div>
+    <div class="center-column">
+        <h3 class="published-interviews">
+            <div class="item">Velo Magazine Interview with Jose Been</div>
+            <div class="description">conversation about nice bikes and the elevating the state of women's racing</div>
+        </h3>
+    </div>
+    <div class="source-link">
+        <div class="link"><a href="https://velo.outsideonline.com/road/road-racing/austin-killips-is-making-waves-in-the-cyclocross-peloton/">LINK</a></div>
+    </div>
+</div>
+
+<div class="timeline-item">
+    <div class="year">
+        <time datetime="2022">2022</time>
+    </div>
+    <div class="center-column">
+        <h3 class="published-interviews">
+            <div class="item">CXHairs interview with Zach Schuster</div>
+            <div class="description">conversation about 2022 domestic cyclocross season</div>
+        </h3>
+    </div>
+    <div class="source-link">
+        <div class="link"><a href="https://cxhairs.substack.com/p/a-little-motivation-goes-a-long-way?utm_source=publication-search">LINK</a></div>
+    </div>
+</div>
+
+<div class="timeline-item">
+    <div class="year">
+        <time datetime="2021">2021</time>
+    </div>
+    <div class="center-column">
+        <h3 class="published-interviews">
+            <div class="item">CXHairs interview with Zach Schuster</div>
+            <div class="description">conversation about being the first trans woman to race a UCI Cyclocross World Cup</div>
+        </h3>
+    </div>
+    <div class="source-link">
+        <div class="link"><a href="https://cxhairs.substack.com/p/in-first-world-cup-austin-killips?utm_source=publication-search">LINK</a></div>
+    </div>
+</div>
+
+<div class="timeline-item">
+    <div class="year">
+        <time datetime="2021">2021</time>
+    </div>
+    <div class="center-column">
+        <h3 class="published-interviews">
+            <div class="item">Velonews Snippet</div>
+            <div class="description">commenting on the anti-trans laws in Fayetteville, Arkansas</div>
+        </h3>
+    </div>
+    <div class="source-link">
+        <div class="link"><a href="https://velo.outsideonline.com/cyclocross/cyclocross-racing/athletes-activists-see-fayetteville-world-cup-as-opportunity-to-counter-trans-legislation/">LINK</a></div>
+    </div>
+</div>
+
+<div class="timeline-item">
+    <div class="year">
+        <time datetime="2021">2021</time>
+    </div>
+    <div class="center-column">
+        <h3 class="published-interviews">
+            <div class="item">CXHairs Transgender roundtable</div>
+            <div class="description">discussion about trans inslusion in sport</div>
+        </h3>
+    </div>
+    <div class="source-link">
+        <div class="link"><a href="https://cxhairs.substack.com/p/cyclocross-radio-ep-225-anti-transgender">LINK</a></div>
+    </div>
+</div>
+
+<div class="timeline-item">
+    <div class="year">
+        <time datetime="2021">2021</time>
+    </div>
+    <div class="center-column">
+        <h3 class="published-interviews">
+            <div class="item">Feisty 'womxns' summit panel discussion</div>
+            <div class="description">panel on building inclusive communities in sport</div>
+        </h3>
+    </div>
+    <div class="source-link">
+        <div class="link"><a href="https://livefeisty.com/stories/blog/finally-feisty-females-get-a-dedicated-conference/">LINK</a></div>
+    </div>
+</div>
+</section>
+
+<section class="research">
+    <h2 class="section-header" data-section="research">Research I'm In</h2>
+    <div class="section-content" id="research-content">
+ 
+<div class="timeline-item">
+    <div class="year">
+        <time datetime="2024"> 2024</time>
+    </div>
+    <div class="center-column">
+    <h3 class="research-work">
+        <div class="item">From culture war clashes to common ground on one of the most challenging issues</div>
+        <div class="authors">Robin Fretwell Wilson, J. Stuart Adams, Kera Birkeland, Bryce Morris, Kimball Yeates</div>
+    </h3>
+</div>
+<div class="source-link">
+ <div class="link"><a href="https://experts.illinois.edu/en/publications/religion-and-human-rights-from-culture-war-clashes-to-common-grou">LINK</a></div>
+</div>
+</div>
+
+<div class="timeline-item">
+    <div class="year">
+        <time datetime="2024"> 2024</time>
+    </div>
+    <div class="center-column">
+    <h3 class="research-work">
+        <div class="item">How Can the Trans Law Influence the World of Sports</div>
+        <div class="authors">Andres Maroto Sanchez</div>
+    </h3>
+</div>
+<div class="source-link">
+ <div class="link"><a href="https://www.seed-deporte.es/noticias/como-puede-influir-la-ley-trans-en-el-mundo-del-deporte?elem=337272">LINK</a></div>
+</div>
+</div>
+
+<div class="timeline-item">
+    <div class="year">
+        <time datetime="2024"> 2024</time>
+    </div>
+    <div class="center-column">
+    <h3 class="research-work">
+        <div class="item">Developing Gender Eligibility Policies in Football: Diverse Perspectives</div>
+        <div class="authors">Dr. Seema Pate</div>
+    </h3>
+</div>
+<div class="source-link">
+ <div class="link"><a href="https://irep.ntu.ac.uk/id/eprint/52408/1/2248676_Patel.pdf">LINK</a></div>
+</div>
+</div>
+
+<div class="timeline-item">
+    <div class="year">
+        <time datetime="2023">2023</time>
+    </div>
+    <div class="center-column">
+    <h3 class="research-work">
+        <div class="item">Trans Athletes and the Limits of Recognition, Visibility and Intelligibility</div>
+        <div class="authors">C.B. Lucas, Matthew R. Hodler</div>
+    </h3>
+</div>
+<div class="source-link">
+ <div class="link"><a href="https://www.researchgate.net/publication/375518120_Trans_Athletes_and_the_Limits_of_Recognition_Visibility_and_Intelligibility?_tp=eyJjb250ZXh0Ijp7InBhZ2UiOiJzY2llbnRpZmljQ29udHJpYnV0aW9ucyIsInByZXZpb3VzUGFnZSI6bnVsbH19">LINK</a></div>
+</div>
+</div>
+
+<div class="timeline-item">
+    <div class="year">
+        <time datetime="2023">2023</time>
+    </div>
+    <div class="center-column">
+    <h3 class="research-work">
+        <div class="item">The Binary World of Sport: Belonging and Resistance</div>
+        <div class="authors">Helen Jefferson Lenskyj, Ali Durham Greey</div>
+    </h3>
+</div>
+<div class="source-link">
+ <div class="link"><a href="https://www.researchgate.net/publication/375518016_Introduction_The_Binary_World_of_Sport_Belonging_and_Resistance">LINK</a></div>
+</div>
+</div>
+
+<div class="timeline-item">
+    <div class="year">
+        <time datetime="2021">2021</time>
+    </div>
+    <div class="center-column">
+    <h3 class="research-work">
+        <div class="item">No Winners Transgender Athletes in Cycling</div>
+        <div class="authors">Max Pratt</div>
+    </h3>
+</div>
+<div class="source-link">
+ <div class="link"><a href="https://digitalcommons.risd.edu/cgi/viewcontent.cgi?article=1752&context=masterstheses">LINK</a></div>
+</div>
+</div>
+
+</section>
+
+<section class="cycling-results">
+    <h2 class="section-header" data-section="cycling-results">Cycling Results</h2>
+    <div class="section-content" id="cycling-results-content">    
+        <p class="subheading">* Limited to international level competitions</p>
+    <p class="subheading">** National championships and overall wins at stage races are bolded</p>
+    <br>
+
+    <div class="timeline-item">
+        <div class="year">
+            <time datetime="2024">2024</time>
+        </div>
+        <div class="center-column">
+        <h3 class="race-result">
+            <div class="event">Tour Divide Independent Time Trial</div>
+        </h3>
+        </div>
+        <div class="place-highlight"> 
+        <div class="alt-result-highlight" style="background-color:#FFD700">FKT</div>
+      </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="year">
+            <time datetime="2024">2024</time>
+        </div>
+        <div class="center-column">
+            <h3 class="race-result">
+                <div class="event">Arizona Trail Independent Time Trial</div>
+            </h3>
+        </div>
+        <div class="place-highlight">
+            <div class="alt-result-highlight" style="background-color:#FFD700">FKT</div>
+        </div>
+    </div>
+
+    <hr style="margin:.5rem 1rem .5rem; height:2px; width:3rem; border-top: 4px solid #e93423">
+
+    <div class="timeline-item">
+        <div class="year">
+            <time datetime="2023">2023</time>
+        </div>
+        <div class="center-column">
+            <h3 class="race-result">
+                <div class="item">TRANS WOMEN BANNED - UCI COMPETITION</div>
+            </h3>
+        </div>
+        <div class="place-highlight">
+            <div class="result-highlight" style="background-color:red">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+        </div>
+    </div>
+
+    <div class="timeline-item">
+        <div class="year">
+            <time datetime="2023">2023</time>
+        </div>
+        <div class="center-column">
+            <h3 class="race-result">
+                <div class="item">TRANS WOMEN BANNED - BELGIAN WAFFLE RIDE</div>
+            </h3>
+        </div>
+        <div class="place-highlight">
+            <div class="result-highlight" style="background-color:red">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+        </div>
+    </div>
+
+    <div class="timeline-item">
+        <div class="year">
+            <time datetime="2023">2023</time>
+        </div>
+        <div class="center-column">
+            <h3 class="race-result">
+                <div class="item">National Championship Road Race</div>
+            </h3>
+        </div>
+          <div class="place-highlight">
+            <div class="result-highlight">9TH</div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="year">
+            <time datetime="2023">2023</time>
+        </div>
+        <div class="center-column">
+            <h3 class="race-result">
+                <div class="event">Belgian Waffle Ride North Carolina</div>
+            </h3>
+        </div>
+        <div class="place-highlight">
+            <div class="result-highlight" style="background-color:#FFD700">&#8202;&#8202;1ST&#8202;&#8202;</div>
+        </div>
+    </div>
+    <div class="timeline-item">
+        <div class="year">
+            <time datetime="2023">2023</time>
+        </div>
+        <div class="center-column">
+            <h3 class="race-result">
+                <div class="event">Belgian Waffle Ride British Columbia</div>
+            </h3>
+        </div>
+        <div class="place-highlight">
+            <div class="result-highlight" style="background-color:silver;">2ND</div>
+        </div>
+    </div>
+    <div class="timeline-item">
+        <div class="year">
+            <time datetime="2023">2023</time>
+        </div>
+        <div class="center-column">
+            <h3 class="race-result">
+                <div class="item">Tour of the Gila Mountains Classification</div>
+            </h3>
+        </div>
+        <div class="place-highlight">
+            <div class="result-highlight" style="background-color:#FFD700">&#8202;&#8202;1ST&#8202;&#8202;</div>
+        </div>
+    </div>
+    <div class="timeline-item">
+        <div class="year">
+            <time datetime="2023">2023</time>
+        </div>
+        <div class="center-column">
+            <h3 class="race-result">
+                <div class="item">Tour of the Gila GC</div>
+            </h3>
+        </div>
+        <div class="place-highlight">
+            <div class="result-highlight" style="background-color:#FFD700">&#8202;&#8202;1ST&#8202;&#8202;</div>
+        </div>
+    </div>
+    <div class="timeline-item">
+        <div class="year">
+            <time datetime="2023">2023</time>
+        </div>
+        <div class="center-column">
+            <h3 class="race-result">
+                <div class="event">Tour of the Gila Stage 5</div>
+            </h3>
+        </div>
+        <div class="place-highlight">
+            <div class="result-highlight" style="background-color:#FFD700">&#8202;&#8202;1ST&#8202;&#8202;</div>
+        </div>
+    </div>
+    <div class="timeline-item">
+        <div class="year">
+            <time datetime="2023">2023</time>
+        </div>
+        <div class="center-column">
+            <h3 class="race-result">
+                <div class="event">Tour of the Gila Stage 3 (ITT)</div>
+            </h3>
+        </div>
+        <div class="place-highlight">
+            <div class="result-highlight" style="background-color:#CE8946">3RD </div>
+        </div>
+    </div>
+    <div class="timeline-item">
+        <div class="year">
+            <time datetime="2023">2023</time>
+        </div>
+        <div class="center-column">
+            <h3 class="race-result">
+                <div class="event">Tour of the Gila Stage 1</div>
+            </h3>
+        </div>
+        <div class="place-highlight">
+            <div class="result-highlight"style="background-color:silver;">2ND</div>
+        </div>
+    </div>
+    <div class="timeline-item">
+        <div class="year">
+            <time datetime="2023">2023</time>
+        </div>
+        <div class="center-column">
+            <h3 class="race-result">
+                <div class="event">Exact Cross Zonnebeke</div>
+            </h3>
+        </div>
+        <div class="place-highlight">
+            <div class="result-highlight" style="background-color:#CE8946">3RD</div>
+        </div>
+    </div>
+    <div class="timeline-item">
+        <div class="year">
+            <time datetime="2023">2023</time>
+        </div>
+        <div class="center-column">
+            <h3 class="race-result">
+                <div class="event">Otegem Cyclocross</div>
+            </h3>
+        </div>
+        <div class="place-highlight">
+            <div class="result-highlight">5TH</div>
+        </div>
+    </div>
+    <div class="timeline-item">
+        <div class="year">
+            <time datetime="2023">2023</time>
+        </div>
+        <div class="center-column">
+            <h3 class="race-result">
+                <div class="event">X20 Trofee Baal</div>
+            </h3>
+        </div>
+        <div class="place-highlight">
+            <div class="result-highlight">12TH</div>
+        </div>
+    </div>
+
+    <hr style="margin:.5rem 1rem .5rem; height:2px; width:3rem; border-top: 4px solid #e93423">
+
+    <div class="timeline-item">
+        <div class="year">
+            <time datetime="2022">2022</time>
+        </div>
+        <div class="center-column">
+            <h3 class="race-result">
+                <div class="event" style="font-weight:bold">Cyclocross National Championship</div>
+            </h3>
+        </div>
+        <div class="place-highlight">
+            <div class="result-highlight" style="background-color:#CE8946">3RD</div>
+        </div>
+    </div>
+
+    <div class="timeline-item">
+        <div class="year">
+            <time datetime="2022">2022</time>
+        </div>
+        <div class="center-column">
+            <h3 class="race-result">
+                <div class="event">Northampton International Cyclocross Day 2</div>
+            </h3>
+        </div>
+        <div class="place-highlight">
+            <div class="result-highlight" style="background-color:#CE8946">3RD</div>
+        </div>
+    </div>
+    <div class="timeline-item">
+        <div class="year">
+            <time datetime="2022">2022</time>
+        </div>
+        <div class="center-column">
+            <h3 class="race-result">
+                <div class="event">Northampton International Cyclocross Day 1</div>
+            </h3>
+        </div>
+        <div class="place-highlight">
+            <div class="result-highlight" style="background-color:#FFD700">&#8202;&#8202;1ST&#8202;&#8202;</div>
+        </div>
+    </div>
+    <div class="timeline-item">
+        <div class="year">
+            <time datetime="2022">2022</time>
+        </div>
+        <div class="center-column">
+            <h3 class="race-result">
+                <div class="event">USCX Series Overall</div>
+            </h3>
+        </div>
+        <div class="place-highlight">
+            <div class="result-highlight" style="background-color:#CE8946">3RD</div>
+        </div>
+    </div>
+    <div class="timeline-item">
+        <div class="year">
+            <time datetime="2022">2022</time>
+        </div>
+        <div class="center-column">
+            <h3 class="race-result">
+                <div class="event">Really Rad Festival of Cyclocross C2</div>
+            </h3>
+        </div>
+        <div class="place-highlight">
+            <div class="result-highlight" style="background-color:#CE8946">3RD</div>
+        </div>
+    </div>
+    <div class="timeline-item">
+        <div class="year">
+            <time datetime="2022">2022</time>
+        </div>
+        <div class="center-column">
+            <h3 class="race-result">
+                <div class="event">Really Rad Festival of Cyclocross C1</div>
+            </h3>
+        </div>
+        <div class="place-highlight">
+            <div class="result-highlight">4TH</div>
+        </div>
+    </div>
+    <div class="timeline-item">
+        <div class="year">
+            <time datetime="2022">2022</time>
+        </div>
+        <div class="center-column">
+            <h3 class="race-result">
+                <div class="event">Pan-American Continental Cyclocross Championships</div>
+            </h3>
+        </div>
+        <div class="place-highlight">
+            <div class="result-highlight">4TH </div>
+        </div>
+    </div>
+    <div class="timeline-item">
+        <div class="year">
+            <time datetime="2022">2022</time>
+        </div>
+        <div class="center-column">
+            <h3 class="race-result">
+                <div class="event">UCI World Cup Fayetteville</div>
+            </h3>
+        </div>
+        <div class="place-highlight">
+            <div class="result-highlight">10TH </div>
+        </div>
+    </div>
+    <div class="timeline-item">
+        <div class="year">
+            <time datetime="2022">2022</time>
+        </div>
+        <div class="center-column">
+            <h3 class="race-result">
+                <div class="event">OZ Cross C1</div>
+            </h3>
+        </div>
+        <div class="place-highlight">
+            <div class="result-highlight">5TH </div>
+        </div>
+    </div>
+    <div class="timeline-item">
+        <div class="year">
+            <time datetime="2022">2022</time>
+        </div>
+        <div class="center-column">
+            <h3 class="race-result">
+                <div class="event">UCI World Cup Waterloo</div>
+            </h3>
+        </div>
+        <div class="place-highlight">
+            <div class="result-highlight">13TH</div>
+        </div>
+    </div>
+    <div class="timeline-item">
+        <div class="year">
+            <time datetime="2022">2022</time>
+        </div>
+        <div class="center-column">
+            <h3 class="race-result">
+                <div class="event">Trek Cup C1</div>
+            </h3>
+        </div>
+        <div class="place-highlight">
+            <div class="result-highlight">6TH </div>
+        </div>
+    </div>
+    <div class="timeline-item">
+        <div class="year">
+            <time datetime="2022">2022</time>
+        </div>
+        <div class="center-column">
+            <h3 class="race-result">
+                <div class="event">Charm City CX C2</div>
+            </h3>
+        </div>
+        <div class="place-highlight">
+            <div class="result-highlight" style="background-color:#CE8946">3RD </div>
+        </div>
+    </div>
+    <div class="timeline-item">
+        <div class="year">
+            <time datetime="2022">2022</time>
+        </div>
+        <div class="center-column">
+            <h3 class="race-result">
+                <div class="event">Charm City CX C1</div>
+            </h3>
+        </div>
+        <div class="place-highlight">
+            <div class="result-highlight">4TH </div>
+        </div>
+    </div>
+    <div class="timeline-item">
+        <div class="year">
+            <time datetime="2022">2022</time>
+        </div>
+        <div class="center-column">
+            <h3 class="race-result">
+                <div class="event">Rochester Cyclocross C2</div>
+            </h3>
+        </div>
+        <div class="place-highlight">
+            <div class="result-highlight">9TH </div>
+        </div>
+    </div>
+    <div class="timeline-item">
+        <div class="year">
+            <time datetime="2022">2022</time>
+        </div>
+        <div class="center-column">
+            <h3 class="race-result">
+                <div class="event">Rochester Cyclocross C1</div>
+            </h3>
+        </div>
+        <div class="place-highlight">
+            <div class="result-highlight" style="background-color:#CE8946">3RD</div>
+        </div>
+    </div>
+    <div class="timeline-item">
+        <div class="year">
+            <time datetime="2022">2022</time>
+        </div>
+        <div class="center-column">
+            <h3 class="race-result">
+                <div class="event">Virginia's Blue Ridge GO Cross C2</div>
+            </h3>
+        </div>
+        <div class="place-highlight">
+            <div class="result-highlight" style="background-color:#CE8946">3RD</div>
+        </div>
+    </div>
+    <div class="timeline-item">
+        <div class="year">
+            <time datetime="2022">2022</time>
+        </div>
+        <div class="center-column">
+            <h3 class="race-result">
+                <div class="event">Virginia's Blue Ridge GO Cross C1</div>
+            </h3>
+        </div>
+        <div class="place-highlight">
+            <div class="result-highlight" style="background-color:#CE8946">3RD</div>
+        </div>
+    </div>
+    <div class="timeline-item">
+        <div class="year">
+            <time datetime="2022">2022</time>
+        </div>
+        <div class="center-column">
+            <h3 class="race-result">
+                <div class="event">National Championship Road Race</div>
+            </h3>
+        </div>
+        <div class="place-highlight">
+            <div class="result-highlight">8TH</div>
+        </div>
+    </div>
+    <div class="timeline-item">
+        <div class="year">
+            <time datetime="2022">2022</time>
+        </div>
+        <div class="center-column">
+            <h3 class="race-result">
+                <div class="event">National Championship Independent Time Trial (ITT)</div>
+            </h3>
+        </div>
+        <div class="place-highlight">
+            <div class="result-highlight">9TH</div>
+        </div>
+    </div>
+    <div class="timeline-item">
+        <div class="year">
+            <time datetime="2022">2022</time>
+        </div>
+        <div class="center-column">
+            <h3 class="race-result">
+                <div class="item">Joe Martin Stage Race Mountains Classification</div>
+            </h3>
+        </div>
+        <div class="place-highlight">
+            <div class="result-highlight" style="background-color:#FFD700">&#8202;&#8202;1ST&#8202;&#8202;</div>
+        </div>
+    </div>
+    <div class="timeline-item">
+        <div class="year">
+            <time datetime="2022">2022</time>
+        </div>
+        <div class="center-column">
+            <h3 class="race-result">
+                <div class="item">Joe Martin Stage Race GC/Overall</div>
+            </h3>
+        </div>
+        <div class="place-highlight">
+            <div class="result-highlight" style="background-color:#CE8946">3RD</div>
+        </div>
+    </div>
+    <div class="timeline-item">
+        <div class="year">
+            <time datetime="2022">2022</time>
+        </div>
+        <div class="center-column">
+            <h3 class="race-result">
+                <div class="event">Joe Martin Stage Race Stage 4</div>
+            </h3>
+        </div>
+        <div class="place-highlight">
+            <div class="result-highlight">4TH</div>
+        </div>
+    </div>
+    <div class="timeline-item">
+        <div class="year">
+            <time datetime="2022">2022</time>
+        </div>
+        <div class="center-column">
+            <h3 class="race-result">
+                <div class="event">Joe Martin Stage Race Stage 3 (ITT)</div>
+            </h3>
+        </div>
+        <div class="place-highlight">
+            <div class="result-highlight" style="background-color:silver;">2ND</div>
+        </div>
+    </div>
+    <div class="timeline-item">
+        <div class="year">
+            <time datetime="2022">2022</time>
+        </div>
+        <div class="center-column">
+            <h3 class="race-result">
+                <div class="event">Joe Martin Stage Race Stage 2</div>
+            </h3>
+        </div>
+        <div class="place-highlight">
+            <div class="result-highlight" style="background-color:#CE8946">3RD</div>
+        </div>
+    </div>
+    <div class="timeline-item">
+        <div class="year">
+            <time datetime="2022">2022</time>
+        </div>
+        <div class="center-column">
+            <h3 class="race-result">
+                <div class="event">Joe Martin Stage Race Stage 1</div>
+            </h3>
+        </div>
+        <div class="place-highlight">
+            <div class="result-highlight">19TH</div>
+        </div>
+    </div>
+    <div class="timeline-item">
+        <div class="year">
+            <time datetime="2022">2022</time>
+        </div>
+        <div class="center-column">
+            <h3 class="race-result">
+                <div class="item">Tour of the Gila Mountains Classification</div>
+            </h3>
+        </div>
+        <div class="place-highlight">
+            <div class="result-highlight">4TH</div>
+        </div>
+    </div>
+    <div class="timeline-item">
+        <div class="year">
+            <time datetime="2022">2022</time>
+        </div>
+        <div class="center-column">
+            <h3 class="race-result">
+                <div class="item">Tour of the Gila GC/Overall</div>
+            </h3>
+        </div>
+        <div class="place-highlight">
+            <div class="result-highlight" style="background-color:#CE8946">3RD</div>
+        </div>
+    </div>
+    <div class="timeline-item">
+        <div class="year">
+            <time datetime="2022">2022</time>
+        </div>
+        <div class="center-column">
+            <h3 class="race-result">
+                <div class="event">Tour of the Gila Stage 5</div>
+            </h3>
+        </div>
+        <div class="place-highlight">
+            <div class="result-highlight" style="background-color:silver;">2ND</div>
+        </div>
+    </div>
+    <div class="timeline-item">
+        <div class="year">
+            <time datetime="2022">2022</time>
+        </div>
+        <div class="center-column">
+            <h3 class="race-result">
+                <div class="event">Tour of the Gila Stage 4</div>
+            </h3>
+        </div>
+        <div class="place-highlight">
+            <div class="result-highlight" style="background-color:#CE8946">3RD</div>
+        </div>
+    </div>
+    <div class="timeline-item">
+        <div class="year">
+            <time datetime="2022">2022</time>
+        </div>
+        <div class="center-column">
+            <h3 class="race-result">
+                <div class="event">Tour of the Gila stage 3 (ITT)</div>
+            </h3>
+        </div>
+        <div class="place-highlight">
+            <div class="result-highlight">8TH</div>
+        </div>
+    </div>
+    <div class="timeline-item">
+        <div class="year">
+            <time datetime="2022">2022</time>
+        </div>
+        <div class="center-column">
+            <h3 class="race-result">
+                <div class="event">Tour of the Gila Stage 2</div>
+            </h3>
+        </div>
+        <div class="place-highlight">
+            <div class="result-highlight">6TH</div>
+        </div>
+    </div>
+    <div class="timeline-item">
+        <div class="year">
+            <time datetime="2022">2022</time>
+        </div>
+        <div class="center-column">
+            <h3 class="race-result">
+                <div class="event">Tour of the Gila Stage 1</div>
+            </h3>
+        </div>
+        <div class="place-highlight">
+            <div class="result-highlight" style="background-color:#CE8946">3RD</div>
+        </div>
+    </div>
+
+    <div class="timeline-item">
+        <div class="year">
+            <time datetime="2022">2022</time>
+        </div>
+        <div class="center-column">
+            <h3 class="race-result">
+                <div class="event">Mid South Gravel</div>
+            </h3>
+        </div>
+        <div class="place-highlight">
+            <div class="result-highlight">6TH</div>
+        </div>
+    </div>
+
+    <div class="timeline-item">
+        <div class="year">
+            <time datetime="2022">2022</time>
+        </div>
+        <div class="center-column">
+            <h3 class="race-result">
+                <div class="event">Barry Roubaix</div>
+            </h3>
+        </div>
+        <div class="place-highlight">
+            <div class="result-highlight" style="background-color:silver">2ND</div>
+        </div>
+    </div>
+
+    <hr style="margin: 1rem ; height:2px; width:3rem; border-top: 4px solid #e93423">
+
+
+     <div class="timeline-item">
+       <div class="year">
+            <time datetime="2021">2021</time>
+        </div>
+       <div class="center-column">
+         <h3 class="race-result">
+            <div class= "event">Cyclocross National Championship</div>
+         </h3>
+    </div>
+    <div class="place-highlight">
+        <div class="result-highlight">10TH</div>
+         </div>
+         </div>
+
+         <div class="timeline-item">
+            <div class="year">
+                 <time datetime="2021">2021</time>
+             </div>
+            <div class="center-column">
+              <h3 class="race-result">
+                 <div class= "event">Charm City Cyclocross C2</div>
+              </h3>
+         </div>
+         <div class="place-highlight">
+             <div class="result-highlight">15TH</div>
+              </div>
+            </div>
+
+
+         <div class="timeline-item">
+            <div class="year">
+                 <time datetime="2021">2021</time>
+             </div>
+            <div class="center-column">
+              <h3 class="race-result">
+                 <div class= "event">Charm City Cyclocross C1</div>
+              </h3>
+         </div>
+         <div class="place-highlight">
+             <div class="result-highlight">15TH</div>
+              </div>
+            </div>
+
+
+         <div class="timeline-item">
+            <div class="year">
+                 <time datetime="2021">2021</time>
+             </div>
+            <div class="center-column">
+              <h3 class="race-result">
+                 <div class= "event">Rochester Cyclocross C1</div>
+              </h3>
+         </div>
+         <div class="place-highlight">
+             <div class="result-highlight">12TH</div>
+              </div>
+            </div>
+
+         <div class="timeline-item">
+            <div class="year">
+                 <time datetime="2021">2021</time>
+             </div>
+            <div class="center-column">
+              <h3 class="race-result">
+                 <div class= "event">Virginia's Blue Ridge GO Cross C2</div>
+              </h3>
+         </div>
+         <div class="place-highlight">
+             <div class="result-highlight">8TH</div>
+              </div>
+            </div>
+
+       <div class="timeline-item">
+        <div class="year">
+             <time datetime="2021">2021</time>
+         </div>
+        <div class="center-column">
+          <h3 class="race-result">
+             <div class= "event">Virginia's Blue Ridge GO Cross C2</div>
+          </h3>
+     </div>
+     <div class="place-highlight">
+         <div class="result-highlight">11TH</div>
+          </div>
+        </div>
+        
+       <div class="timeline-item">
+        <div class="year">
+             <time datetime="2021">2021</time>
+         </div>
+        <div class="center-column">
+          <h3 class="race-result">
+             <div class= "event">Rebecca's Private Idaho - Queen's Stage Race</div>
+          </h3>
+     </div>
+     <div class="place-highlight">
+         <div class="result-highlight">5TH</div>
+          </div>
+        </div>
+
+       <div class="timeline-item">
+        <div class="year">
+             <time datetime="2021">2021</time>
+         </div>
+        <div class="center-column">
+          <h3 class="race-result">
+             <div class= "event"> Track National Championship (Team Relay)</div>
+          </h3>
+     </div>
+     <div class="place-highlight">
+         <div class="result-highlight"style="background-color:silver">2ND</div>
+          </div>
+        </div>
+</section>
+<hr style="margin: rem ; height:2px; width:100%; border-top: 2px solid #e93423 ">
+
+      <section class="outro">
+        <p class="outro-borderbox"> Thank you for reading <br>If you have any questions<br>please inquire
+      <div class="outro-top"></div>
+      <div class="outro-bottom"></div>
+      <div class="outro-left"></div>
+      <div class="outro-right"></div>
+        </section>
+        <section class="cv-footer">
+            <a href="mailto:hello@austinkillips.com" class="bottom-contact-email" >hello@austinkillips.com</a> 
+            </section>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // Get all section headers
+                const sectionHeaders = document.querySelectorAll('.section-header');
+                
+                // All sections start collapsed (no classes added initially)
+                
+                sectionHeaders.forEach(header => {
+                    header.addEventListener('click', function() {
+                        const sectionName = this.getAttribute('data-section');
+                        const content = document.getElementById(sectionName + '-content');
+                        
+                        if (content) {
+                            // Toggle expanded class on both header and content
+                            this.classList.toggle('expanded');
+                            content.classList.toggle('expanded');
+                        }
+                    });
+                });
+                
+                // Optional: Add keyboard support
+                sectionHeaders.forEach(header => {
+                    header.setAttribute('tabindex', '0');
+                    header.addEventListener('keydown', function(e) {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                            e.preventDefault();
+                            this.click();
+                        }
+                    });
+                });
+            });
+            </script>
+</body>
+</html>
