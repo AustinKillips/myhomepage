@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles2.css">
     <title>Document</title>
 </head>
 <style>
@@ -20,17 +20,19 @@
     .section-header::after {
         content: '+';
         position: absolute;
-        left: -2rem;
+        left: -1.5rem;
         right: 100;
-        top: 60%;
-        transform: translateY(-50%);
-        font-size: 2rem;
+        top: -15%;
+        font-size: clamp(1rem, 4vw, 2rem);
         font-weight: bold;
-        transition: transform 0.3s ease;
+        transition: transform 06.s ease;
     }
     
     .section-header.expanded::after {
         content: '−';
+        transform: rotate(var(--random-rotation, 0deg));
+        transition: opacity .5s ease-out;
+        color: #1155cc;
     }
     
     .section-content {
@@ -43,10 +45,12 @@
     .section-content.expanded {
         max-height: none; /* Increased for longer sections */
         opacity: 1;
+
     }
     
     .section-header:hover {
         opacity: 0.8;
+        text-decoration:solid;
     }
     
     /* Fix for floating element in achievements section */
@@ -63,12 +67,13 @@
 <body>
 <main class="cv-container">
     <header class="cv-header">
-      <h1>AUSTIN KILLIPS</h1>
-    <h3>digital repository</h3>
+       <h3>A DIGITAL REPOSITORY FOR:</h3>
+       <h1>AUSTIN KILLIPS  </h1>
+   
     </header>  
    
     <section class="headpopout">
-    <a href="mailto:hello@austinkillips.com" class="secondstyle contact-email" >hello@austinkillips.com</a> 
+    <a href="mailto:hello@austinkillips.com" class="secondstyle contact-email" >say hi </a> 
     </section>
 
     <br>
@@ -82,6 +87,19 @@
     <div class="right"></div>
     </section>
 
+    <section class="about">
+        <h2 class="section-header" data-section="about">About</h2>
+        <div class="section-content" id="about-content">
+            
+<div class="bio"> <p>Austin Killips used to race bicycles professionally. She has set all time records on prestiguous ultra-distance bikepacking routes, 
+                    stood on international and domestic podiums, and draws pretty lines with biometric sensors.
+                    She also caused quite a stir after becoming first trans woman to win 'The Tour of the Gila'.<br>
+                <br> In the summer of twenty twenty four she decided to retire from cycling when the universe offered a chance to close the self destructive feedback loop that professional pedaling had become. <br>
+                <br> Austin now spends her time writing and making images that are both static and mobile with a small cohort of designers at Studio 405 in Providence, RI<br>
+                <br> Her interests include biometric data collection & self surveillance, Eric Rohmer, primary colors, sisyphus, being-towards-death, and chance encounters with strangers. </p>
+          </div>
+          </div>
+            </section>
 
         <section class="achievements">
             <h2 class="section-header" data-section="achievements">Achievements</h2>
@@ -191,7 +209,7 @@
                 </div>
             </div>
 
-            <div class="writing-item">
+            <div class="writing-item">                
                 <div class="year"></div>
                 <div class="details">
                   <div class="title" style="border-top: 2px solid var(--primary-color); 
@@ -211,28 +229,13 @@
             <div style="clear: both;"></div>
                 </div>
                 </div>
-    </section>
-
-    <section class="writing">
+            </div>
+        </section>
+   
+       <section class="writing">
         <h2 class="section-header" data-section="writing">Writing</h2>
         <div class="section-content" id="writing-content">
-
         <div class="timeline-item">
-          <div class="year">
-            <time datetime="2025">2025</time>
-          </div>
-          <div class="center-column">
-            <h3 class="written-work">
-                <div class="item">A poem about cruising, an essay about (John) Berger</div>
-                <div class="description">Transplants Magazine #3 - prose, essay, mixed media collage</div>
-            </h3>
-        </div>
-        <div class="source-link">
-            <div class="link"><a href="https://asterolsen.com/transplants-zine/issues/">LINK</a></div>
-        </div>
-    </div>
-
-    <div class="timeline-item">
         <div class="year">
             <time datetime="2025">2025</time>
         </div>
@@ -284,7 +287,7 @@
         <div class="center-column">
             <h3 class="written-work">
                 <div class="item">Visibility (and its consequences)</div>
-                <div class="description">self published - essay</div>
+                <div class="description">self published - essay<br>abridged version published for 'into being' gallery opening </div>
             </h3>
         </div>
         <div class="source-link">
@@ -299,7 +302,7 @@
         <div class="center-column">
             <h3 class="written-work">
                 <div class="item">A poem about cruising, an essay about (John) Berger</div>
-                <div class="description">self published - essay</div>
+                <div class="description">self published - essay<br>Featured in Transplants Magazine issue 3 as a mixed media collage</div>
             </h3>
         </div>
         <div class="source-link">
@@ -384,7 +387,7 @@
 </section>
 
 <section class="video">
-    <h2 class="section-header" data-section="video">Video Work</h2>
+    <h2 class="section-header" data-section="video">Video</h2>
         <div class="section-content" id="video-content">
 
   <div class="timeline-item">
@@ -495,6 +498,46 @@
   </div>
 </section>
 
+<section class="Images">
+    <h2 class="section-header" data-section="Images">Images</h2>
+        <div class="section-content" id="Images-content">
+       
+
+        <div class="timeline-item">
+            <div class="year">
+              <time datetime="2025">2025</time>
+          </div>
+            <div class="center-column">
+              <h3 class="images">
+               <div class="item">'into being' gallery materials</div>
+              <div class="description">design project for FXCollaborative gallery show including posters, handouts, brochure, and vinyl graphics</div>
+          </h3>
+            </div>
+          <div class="source-link">
+              <div class="link"><a href="null">LINK</a>
+          </div>
+      </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="year">
+          <time datetime="2025">2025</time>
+      </div>
+        <div class="center-column">
+          <h3 class="images">
+           <div class="item">Women Do Not Poop Media Deck</div>
+          <div class="description">media deck commissioned for short film premiering at Brooklyn Film Festival</div>
+      </h3>
+        </div>
+      <div class="source-link">
+          <div class="link"><a href="assets/Pitchdeck final v6.pdf">LINK</a>
+      </div>
+  </div>
+  </div>
+
+</section>
+
+
 <section class="interviews">
     <h2 class="section-header" data-section="interviews">Interviews and Press</h2>
     <div class="section-content" id="interviews-content">
@@ -543,7 +586,7 @@
         </h3>
     </div>
     <div class="source-link">
-        <div class="link"><a href="" style="color: black; background-color: yellow;">(IN PRINT)</a></div>
+        <div class="link"><a href="" style="color: black; background-color: yellow;">PRINT</a></div>
     </div>
 </div>
 
@@ -747,6 +790,21 @@
     <h2 class="section-header" data-section="research">Research I'm In</h2>
     <div class="section-content" id="research-content">
  
+        <div class="timeline-item">
+            <div class="year">
+                <time datetime="2024"> 2025</time>
+            </div>
+            <div class="center-column">
+            <h3 class="research-work">
+                <div class="item">Post-Ocean: Sustainable Practice in a Collapsing Climate</div>
+                <div class="authors">Max Pratt</div>
+            </h3>
+        </div>
+        <div class="source-link">
+         <div class="link"><a href="https://experts.illinois.edu/en/publications/religion-and-human-rights-from-culture-war-clashes-to-common-grou">LINK</a></div>
+        </div>
+        </div>
+
 <div class="timeline-item">
     <div class="year">
         <time datetime="2024"> 2024</time>
@@ -1499,6 +1557,19 @@
 
     <hr style="margin: 1rem ; height:2px; width:3rem; border-top: 4px solid #e93423">
 
+    <div class="timeline-item">
+        <div class="year">
+             <time datetime="2021">2021</time>
+         </div>
+        <div class="center-column">
+          <h3 class="race-result">
+             <div class= "event">UCI World Cup Rucphen</div>
+          </h3>
+     </div>
+     <div class="place-highlight">
+         <div class="result-highlight">52ND</div>
+          </div>
+          </div>
 
      <div class="timeline-item">
        <div class="year">
@@ -1513,6 +1584,134 @@
         <div class="result-highlight">10TH</div>
          </div>
          </div>
+
+         <div class="timeline-item">
+            <div class="year">
+                 <time datetime="2021">2021</time>
+             </div>
+            <div class="center-column">
+              <h3 class="race-result">
+                 <div class= "event">North Carolina Grand Prix C2</div>
+              </h3>
+         </div>
+         <div class="place-highlight">
+             <div class="result-highlight">7TH</div>
+              </div>
+            </div>
+
+         <div class="timeline-item">
+            <div class="year">
+                 <time datetime="2021">2021</time>
+             </div>
+            <div class="center-column">
+              <h3 class="race-result">
+                 <div class= "event">North Carolina Grand Prix C2</div>
+              </h3>
+         </div>
+         <div class="place-highlight">
+             <div class="result-highlight">10TH</div>
+              </div>
+            </div>
+
+
+         <div class="timeline-item">
+            <div class="year">
+                 <time datetime="2021">2021</time>
+             </div>
+            <div class="center-column">
+              <h3 class="race-result">
+                 <div class= "event">Major Taylor Cross Cup C2</div>
+              </h3>
+         </div>
+         <div class="place-highlight">
+             <div class="result-highlight">9TH</div>
+              </div>
+            </div>
+
+
+         <div class="timeline-item">
+            <div class="year">
+                 <time datetime="2021">2021</time>
+             </div>
+            <div class="center-column">
+              <h3 class="race-result">
+                 <div class= "event">Major Taylor Cross Cup C2</div>
+              </h3>
+         </div>
+         <div class="place-highlight">
+             <div class="result-highlight">5TH</div>
+              </div>
+            </div>
+
+         <div class="timeline-item">
+            <div class="year">
+                 <time datetime="2021">2021</time>
+             </div>
+            <div class="center-column">
+              <h3 class="race-result">
+                 <div class= "event">Kings CX C2</div>
+              </h3>
+         </div>
+         <div class="place-highlight">
+             <div class="result-highlight">15TH</div>
+              </div>
+            </div>
+
+         <div class="timeline-item">
+            <div class="year">
+                 <time datetime="2021">2021</time>
+             </div>
+            <div class="center-column">
+              <h3 class="race-result">
+                 <div class= "event">Kings CX C1</div>
+              </h3>
+         </div>
+         <div class="place-highlight">
+             <div class="result-highlight">11TH</div>
+              </div>
+            </div>
+
+         <div class="timeline-item">
+            <div class="year">
+                 <time datetime="2021">2021</time>
+             </div>
+            <div class="center-column">
+              <h3 class="race-result">
+                 <div class= "event">UCI World Cup Iowa City</div>
+              </h3>
+         </div>
+         <div class="place-highlight">
+             <div class="result-highlight">36TH</div>
+              </div>
+            </div>
+
+         <div class="timeline-item">
+            <div class="year">
+                 <time datetime="2021">2021</time>
+             </div>
+            <div class="center-column">
+              <h3 class="race-result">
+                 <div class= "event">Jingle Cross C1</div>
+              </h3>
+         </div>
+         <div class="place-highlight">
+             <div class="result-highlight">22ND</div>
+              </div>
+            </div>
+
+         <div class="timeline-item">
+            <div class="year">
+                 <time datetime="2021">2021</time>
+             </div>
+            <div class="center-column">
+              <h3 class="race-result">
+                 <div class= "event">Trek Cup</div>
+              </h3>
+         </div>
+         <div class="place-highlight">
+             <div class="result-highlight">13TH</div>
+              </div>
+            </div>
 
          <div class="timeline-item">
             <div class="year">
@@ -1617,21 +1816,19 @@
 <hr style="margin: rem ; height:2px; width:100%; border-top: 2px solid #e93423 ">
 
       <section class="outro">
-        <p class="outro-borderbox"> Thank you for reading <br>If you have any questions<br>please inquire
+        <p class="outro-borderbox"> Thank you for reading&#20&#20 <br>If you have any questions&#20&#8202<br>or just want to chat&#20&#20<br>please holler&#20&#20
       <div class="outro-top"></div>
       <div class="outro-bottom"></div>
       <div class="outro-left"></div>
+      <div class="outro-left2"></div>
       <div class="outro-right"></div>
         </section>
         <section class="cv-footer">
-            <a href="mailto:hello@austinkillips.com" class="bottom-contact-email" >hello@austinkillips.com</a> 
+            <a href="mailto:hello@austinkillips.com" class="bottom-contact-email" >hello@austinkillips.com </a> 
             </section>
         <script>
             document.addEventListener('DOMContentLoaded', function() {
-                // Get all section headers
                 const sectionHeaders = document.querySelectorAll('.section-header');
-                
-                // All sections start collapsed (no classes added initially)
                 
                 sectionHeaders.forEach(header => {
                     header.addEventListener('click', function() {
@@ -1639,14 +1836,19 @@
                         const content = document.getElementById(sectionName + '-content');
                         
                         if (content) {
-                            // Toggle expanded class on both header and content
                             this.classList.toggle('expanded');
                             content.classList.toggle('expanded');
+                            
+                            // Generate random rotation when expanding
+                            if (this.classList.contains('expanded')) {
+                                const randomRotation = Math.random() * 360; // 0 to 360 degrees
+                                this.style.setProperty('--random-rotation', `${randomRotation}deg`);
+                            }
                         }
                     });
                 });
                 
-                // Optional: Add keyboard support
+                // Keyboard support
                 sectionHeaders.forEach(header => {
                     header.setAttribute('tabindex', '0');
                     header.addEventListener('keydown', function(e) {

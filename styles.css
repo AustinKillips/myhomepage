@@ -1,29 +1,30 @@
 :root {
-    --primary-color: #e93423;
-    --secondary-color: #faec27;
-    --highlight-color: #00ff00;
-    --text-color: #000000;
-    --link-color: #1155cc;
-    --background-color: #ffffff;
-    --border-width: 2.2pt;
-    --section-spacing: 2rem;
-    --item-spacing: 1rem;
-    --screen-width: 100vw;
+  --primary-color: #e93423;
+  --secondary-color: #faec27;
+  --highlight-color: #00ff00;
+  --text-color: #000000;
+  --link-color: #1155cc;
+  --background-color: #fffff;
+  --border-width: 2.2pt;
+  --section-spacing: 2rem;
+  --item-spacing: 1rem;
+  --screen-width: 100vw;
 
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: "Sofia Sans", sans-serif;
-    line-height: 1.6;
-    padding: 20px;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-    width: 100%;
+  font-family: "Sofia Sans", sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  width: 100%;
+  background-color: #fdfdfd;
 }
 
 h1{
@@ -34,378 +35,406 @@ padding-bottom: 1rem;
 
 
 h2 {
-    margin-bottom: 1rem;
-    border-left: 2px solid #e93423;
-    border-top: 2px solid #e93423;
-    padding-left: .5rem;
-    max-width: 100%;
-    z-index: 1;
+  margin-bottom: 1rem;
+  border-left: 2px solid #e93423;
+  border-top: 2px solid #e93423;
+  padding-left: .5rem;
+  max-width: 100%;
+  z-index: 1;
 }
 h3 {
-    font-weight: 550;
+  font-weight: 550;
 }
 
 a {
-    color: var(--link-color);
-    text-decoration: none;
-    background-color: #00ff00;
-    padding: .3em .3em;
-    font-size: 110%;
-    font-weight: 900;
-  }
-  
-  a.secondstyle {
-    color: black;
-    text-decoration: none;
-    background-color: #ffff;
-    padding: .3em .3em;
-  
-  }
+  color: var(--link-color);
+  text-decoration: none;
+  background-color: #00ff00;
+  padding: .3em .3em;
+  font-size: 110%;
+  font-weight: 900;
+  font-size: clamp(14px, 4vw, 18.72px);
+
+}
+
+a.secondstyle {
+  color: black;
+  text-decoration: none;
+  background-color: #fdfdfd;
+  padding: .3em .3em;
+
+}
+
+a:hover {
+  text-decoration:underline;
+}
 
 .cv-container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 3rem;
-    position: relative; /* Add this to position the continuous border */
-  }
-  
-  .cv-container::before {
-    content: "";
-    position: absolute;
-    top: 22rem;
-    bottom: 19rem;
-    left: 3rem;
-    width: 2px;
-    background-color: #faec27;
-    z-index: -10;
-  }
-  
-  .cv-header {
-    display: inline-flex;
-    flex-direction: column;
-    margin-bottom: 0rem;
-    border-bottom: 11pt solid var(--secondary-color);
-    min-width: 19.5rem;
-    padding-bottom: 0rem;
-  }
-  
-  .cv-header h1 {
-    font-size: 32pt;
-    font-weight: 900;
-    margin-left: 0;
-    margin-bottom: -1rem;
-  }
-  
-  .contact-email {
-    display:inline-flex;
-    position: absolute;
-    font-size: 10pt;
-    font-style: italic;
-    font-weight: 900;
-    margin-left: 9.25rem;
-    margin-top: 0rem;
-    z-index: 1;
-    border-bottom: 3pt solid var(--primary-color);
-    border-left: 3pt solid var(--primary-color);
-    border-right: 3pt solid var(--primary-color);
-  }
-  
-  .alt-contact-email {
-    display:inline-flex;
-    position: relative;
-    font-size: 10pt;
-    font-style: italic;
-    font-weight: 900;
-    padding-left: .5rem;
-    padding-right: .4rem;
-    margin-top: -20rem;
-    z-index: 1;
-    border-bottom: 3pt solid var(--primary-color);
-    border-right: 3pt solid var(--primary-color);
-  }
-  
-  /* this is 3/4 red border box with my email */
+  max-width: 1000px;
+  min-width: 345px;
+  margin: 0 auto;
+  padding: 3rem;
+  position: relative; /* Add this to position the continuous border */
+}
 
-  .headerpopout {
-    display: flex;
-    position: absolute;
-  }
-  
+.cv-container::before {
+  content: "";
+  position: absolute;
+  top: 22rem;
+  bottom: 15rem;
+  left: 3rem;
+  width: 2px;
+  background-color: #faec27;
+  z-index: -10;
+}
+
+.cv-header {
+  display: inline-flex;
+  flex-direction: column;
+  margin-bottom: 0rem;
+  border-bottom: 8pt solid var(--secondary-color);
+  min-width: 19.1rem;
+  padding-bottom: 0rem;
+}
+
+.cv-header h1 {
+  font-size: 32pt;
+  font-weight: 900;
+  margin-left: 0;
+  margin-bottom: -1rem;
+}
+
+.contact-email {
+  display:inline-flex;
+  position: absolute;
+  font-size: 10pt;
+  font-style: italic;
+  font-weight: 900;
+  margin-left: 16.19rem;
+  margin-top: rem;
+  z-index: 1;
+  border-bottom: 2pt solid var(--primary-color);
+  border-left: 2pt solid var(--primary-color);
+  border-right: 2pt solid var(--primary-color);
+}
+
+.alt-contact-email {
+  display:inline-flex;
+  position: relative;
+  font-size: 10pt;
+  font-style: italic;
+  font-weight: 900;
+  padding-left: .5rem;
+  padding-right: .4rem;
+  margin-top: -20rem;
+  z-index: 1;
+  border-bottom: 3pt solid var(--primary-color);
+  border-right: 3pt solid var(--primary-color);
+  right: absolute;    
+
+}
+
+/* this is 3/4 red border box with my email */
+
+.headerpopout {
+  display: flex;
+  position: absolute;
+  right: absolute;    
+
+}
+
 /* this is my introduction box with the fragemented borders */
 
 
-  .intro {
-    display: flex;
-    position: relative;
-    margin-bottom: var(--section-spacing);
-    font-style: italic;
-    margin-left: 0rem; /* Align with other sections */
-    margin-top: 3rem;
-    padding-top: 3rem; 
-    padding: .5rem;
-    line-height: 1;
-    letter-spacing: -.4px;
- 
-  }
-  
-  div.top:before { content: ""; position: absolute; left: 0rem; top: -.7rem; height: 5px; width: 9.1rem; border-top: 3px solid var(--primary-color); }
-  div.bottom:before { content: ""; position: absolute; left: 0rem; /* top: 4.4rem; */ bottom: -0.5rem; /* Adjust relative to padding */ height: 15px; width: 11rem; border-bottom: 3px solid var(--secondary-color); }
-  div.left:before { content: ""; position: absolute; left: 0rem; top: -.6rem; height: 2rem; width: 0; border-left: 3px solid var(--primary-color); }
-  div.left2:before { content: ""; position: absolute; left: 0rem; bottom: -2rem;/* Adjust relative to padding */ height: 1.5rem; width: 0; border-left: 3px solid var(--secondary-color); z-index: -100; }
-  div.right:before { content: ""; position: absolute;  right: 0rem; left: 10.8rem; top: 3.9rem; height: 1.6rem; width: 0; border-right: 3px solid var(--secondary-color); }
-  div.right2:before { content: ""; position: absolute; right: 0rem; top: -3rem; height: 2.5rem; width: 0; border-right: 3px solid var(--primary-color); }
-  /* --- End Border Box --- */
-  
-  .borderbox{
-    min-width: 100%;
-    padding-left: .4rem;
-    white-space: nowrap;
-    overflow: hidden;
+.intro {
+  display: flex;
+  position: relative;
+  margin-bottom: var(--section-spacing);
+  font-style: italic;
+  margin-left: 0rem; /* Align with other sections */
+  margin-top: 3rem;
+  padding-top: 3rem; 
+  padding: .5rem;
+  line-height: 1;
+  letter-spacing: -.4px;
 
-  }
+}
+
+div.top:before { content: ""; position: absolute; left: 0rem; top: -.7rem; height: 5px; width: 9.1rem; border-top: 3px solid var(--primary-color); }
+div.bottom:before { content: ""; position: absolute; left: 0rem; /* top: 4.4rem; */ bottom: -0.5rem; /* Adjust relative to padding */ height: 15px; width: 11rem; border-bottom: 3px solid var(--secondary-color); }
+div.left:before { content: ""; position: absolute; left: 0rem; top: -.6rem; height: 2rem; width: 0; border-left: 3px solid var(--primary-color); }
+div.left2:before { content: ""; position: absolute; left: 0rem; bottom: -2rem;/* Adjust relative to padding */ height: 1.5rem; width: 0; border-left: 3px solid var(--secondary-color); z-index: -100; }
+div.right:before { content: ""; position: absolute;  right: 0rem; left: 10.8rem; top: 3.9rem; height: 1.6rem; width: 0; border-right: 3px solid var(--secondary-color); }
+div.right2:before { content: ""; position: absolute; right: 0rem; top: -3rem; height: 2.5rem; width: 0; border-right: 3px solid var(--primary-color); }
+/* --- End Border Box --- */
+
+.borderbox{
+  min-width: 100%;
+  padding-left: .4rem;
+  white-space: nowrap;
+  overflow: hidden;
+
+}
+
+.bio {
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  text-align: left;
+}
 
 /* the overall section properties column structure levers live here */
 
 */
-.education,
-.work,
+.about,
 .achievements,
 .writing,
 .video,
+.images,
 .interviews,
 .research {
-    margin-bottom: var(--section-spacing);
+  margin-bottom: var(--section-spacing);
 }*/
 
 .achievements .section-content.collapsed .writing-item {
-    display: none;
+  display: none;
 }
 
 .subheading{
-    font-size: 9pt;
-    margin-bottom: 0.5rem;
-    padding-left: 20px;
-    line-height: 1;
-    margin-top: 0rem;
-  }
+  font-size: 9pt;
+  margin-bottom: 0.5rem;
+  padding-left: 20px;
+  line-height: 1;
+  margin-top: 0rem;
+}
 
 /* the three column structure levers live here */
 
 .timeline-item {
-    display: grid;
-    grid-template-columns: max-content minmax(100px, 1fr) max-content;
-    width: 100%;
-    align-items: start;
-    margin-bottom: 0rem;
-    padding-left: 1.3rem;
-    gap: clamp(.2rem + 6vw);
+  display: grid;
+  grid-template-columns: max-content minmax(100px, 1fr) max-content;
+  width: 100%;
+  align-items: start;
+  margin-top: .25rem;
+  margin-bottom: 0rem;
+  padding-left: 1.3rem;
+  gap: clamp(.2rem + 6vw);
+  line-height: 1;
+
 }
 
 .alt-timeline-item {
-    display: grid;
-    grid-template-columns: minmax(0, 1.5fr) minmax(0, 2fr) minmax(0, 1.5fr);
-    width: 100%;
-    align-items: start;
-    margin-bottom: 0rem;
-    padding-left: 1.3rem;
-    gap: clamp(.2rem + 6vw);
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 2fr) minmax(0, 1.5fr);
+  width: 100%;
+  align-items: start;
+  margin-bottom: 0rem;
+  padding-left: 1.3rem;
+  gap: clamp(.2rem + 6vw);
 }
 
 .result-timeline-item {
-    display: grid;
-    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.7fr) minmax(0, 1.5fr);
-    width: 100%;
-    align-items: start;
-    margin-bottom: 0rem;
-    padding-left: 1.3rem;
-    gap: clamp(.2rem + 6vw);
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.7fr) minmax(0, 1.5fr);
+  width: 100%;
+  align-items: start;
+  margin-bottom: 0rem;
+  padding-left: 1.3rem;
+  gap: clamp(.2rem + 6vw);
 }
 .cycling-results {
-    border-bottom:#e93423;
+  border-bottom:#e93423;
 }
 
 /* the left column and it's child elements live here */
- 
+
 .year {
-    min-width: 100px;
-    font-size: 17.72px;
-    font-weight: 450;
-    text-align: left;
-    justify-self: left;
+  min-width: 100px;
+  font-size: 17.72px;
+  font-weight: 450;
+  text-align: left;
+  justify-self: left;
 }
 
 .year-range {
-    font-size: 17.72px;
-    font-weight: 450;
-    text-align: left;
-    justify-self: left;
+  font-size: 17.72px;
+  font-weight: 450;
+  text-align: left;
+  justify-self: left;
 
 }
 
 /* the center column and it's child elements live here */
 
 .center-column {   
-    margin-left: 13rem;
-    text-align: left;
-    justify-self: start;
-    width: 40%;
+  margin-left: 13rem;
+  text-align: left;
+  justify-self: start;
+  width: 40%;
 }
 .position,
 .institition {
-    text-align: left;
-    white-space: nowrap;
+  text-align: left;
+  white-space: nowrap;
 }
 
 .notable-achievement,
 .written-work,
 .video-work,
+.images,
 .published-interviews,
 .research-work,
 .race-result {
-    text-align: left;
-    margin-left: -8rem;
-    min-width: min-content;
+  text-align: left;
+  margin-left: -8rem;
+  min-width: min-content;
 }
 
 .race-result {
-    font-size: 17px;
+  font-size: 17px;
 }
 
 .item {
-    margin-bottom: 0;
-    line-height: 1;
+font-size: clamp(14px, 4vw, 18.72px);
+  margin-bottom: .25rem;
+  line-height: 1;
 }
 
 .event {
-    font-weight: 450;
-    text-align: left;
-    margin-bottom: .5rem;
+  font-weight: 450;
+  text-align: left;
+  margin-bottom: .5rem;
 
 
 }
 
 .description,
 .authors {
-    font-size: 16px;
+font-size: clamp(12px, 3.5vw, 16px) !important;
     font-weight: 100;
-    font-style: italic;
-    text-wrap: wrap;
-    margin-bottom: 1rem;
-    
+  font-style: italic;
+  text-wrap: wrap;
+  margin-bottom: 1rem;
+  
 }
 
 /* the center column and its child elements live here */
 
 .right-column {
-    text-align: right;
-    justify-self: end;
+  text-align: right;
+  justify-self: end;
 }
 
 .source-link {
-    text-align: right;
-    justify-self: end; 
+  text-align: right;
+  justify-self: end; 
 }
 
 .place-highlight {
-    text-align: right;
-    justify-self: end;
+  text-align: right;
+  justify-self: end;
 }
 .alt-result-highlight,
 .result-highlight {
-    font-size: 17px;
-    padding: 0em .25em 0em .25em;
-    font-weight: 550;
+  font-size: 17px;
+  padding: 0em .25em 0em .25em;
+  font-weight: 550;
 }
 
 .company,
 .concentration {
-    font-weight: 550;
-    font-style: italic;
-    text-align: right;
-    white-space: nowrap;
+  font-weight: 550;
+  font-style: italic;
+  text-align: right;
+  white-space: nowrap;
 }
 
 .link {
-    text-align: right;
-    white-space: nowrap ;
-    display: block;
-    margin-top: .25rem;
+  text-align: right;
+  white-space: nowrap ;
+  display: block;
+  margin-top: .25rem;
 }
 
 .result {
-    text-align: right;
-    white-space: nowrap ;
-    display: block;
-    margin-top: .25rem;
+  text-align: right;
+  white-space: nowrap ;
+  display: block;
+  margin-top: .25rem;
 }
 
 
 .timeline-item > div {
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    hyphens: auto;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
 }
-  
-  .cv-footer {
-    width: 100%;
-    height: 5rem;
-    display: grid;
-    position: relative;
-    margin-bottom: rem;
-    margin-top: rem;
-    padding-top: 0rem;
-    text-align: right;
-    z-index: 1;
-    
-  }
 
-  .bottom-contact-email {
-    display:inline-flex;
-    position:absolute;
-    font-size: 10pt;
-    font-style: italic;
-    font-weight: 900;
-    margin-top: 0rem;
-    z-index: 1;
-    color: black;
-    text-decoration: underline;
-    background-color: white;
-    border-bottom: 3pt solid var(--primary-color);
-    border-left: 2pt solid var(--primary-color);
-    border-right: 3pt solid var(--primary-color);
-  }
+.cv-footer {
+display: flex;
+justify-content: flex-end;
+align-items: center;
+width: 100%;
+position: relative; /* or absolute/fixed depending on need */
+margin-bottom: 2rem;
+margin-left: .25rem;
+text-align: right;
+z-index: 1;
+background: #fdfdfd; /* optional: helps visibility */
+}
+
+.bottom-contact-email {
+  display:flex;
+  position:absolute;
+  font-size: 11pt;
+  font-style: italic;
+  font-weight: 900;
+  right: absolute;    
+  margin-top: -.29rem;
+  z-index: 1;
+  color: black;
+  text-decoration: ;
+  background-color: white;
+  border-bottom: 3px solid var(--primary-color);
+  border-left: 3px solid var(--primary-color);
+  border-right: 3px solid var(--primary-color);
+  float: right;
+}
 
 .outro {
-    display: grid;
-    position: relative;
-    margin-bottom: var(--section-spacing);
-    font-style: italic;
-    left: ; /* align with other sections */
-    margin-top: 5rem;
-    padding: 0.5rem;
-    line-height: 1;
-    letter-spacing: -.4px;
-    text-align: left;
-    float: right;
-  }
-  
-  /* Common styles for decorative pseudo-elements */
+  display: flex;
+  position: relative;
+  margin-bottom: var(--section-spacing);
+  font-style: italic;
+  left: -.2rem; /* align with other sections */
+  margin-top: 4rem;
+  line-height: 1;
+  letter-spacing: -.4px;
+  text-align: left;
+  float: right;
+  align-items: flex-end;
+
+}
+/* Common styles for decorative pseudo-elements */
 
 
-  div.outro-top:before {
-    content: "";position: absolute;left: -3rem; top: -0.7rem;height: 5px;width: 130%;border-top: 3px solid var(--secondary-color);
-  }
-  
-  div.outro-right:before {
-    content: "";position: absolute; left: 5.9rem;top: -.7rem;height: 1.7rem;width: 50%;border-right: 3px solid var(--secondary-color);
-  }
+div.outro-top:before {
+  content: "";position: absolute;left: -.64rem; top: -.9rem;height: 5px;width: 108%;border-top: 3px solid var(--secondary-color);
+}
 
-  div.outro-left:before {
-    content: "";position: absolute;left:-8.6rem;top: -4.9rem;height: 4rem; width: 50%;border-right: 3px solid var(--secondary-color);
-  }
-  div.outro-bottom:before {
-    content: "";position: absolute;left: 6.5rem;top: 4.9rem;height: 5px;width: 50%;border-top: 3px solid var(--primary-color);
-  }
+div.outro-right:before {
+  content: "";position: absolute; left: 5.4rem;top: -4.2rem;height: 3.4rem;width: 50%;border-right: 3px solid var(--secondary-color);
+}
+div.outro-left2:before {
+  content: "";position: absolute; left: -6rem;top: -.9rem;height: 1.8rem;width: 50%;border-right: 3px solid var(--secondary-color);
+}
+
+div.outro-left:before {
+  content: "";position: absolute;left:5.5rem;top: 3.25rem;height: 1.5rem; width: 50%;border-right: 3px solid var(--primary-color);
+}
+div.outro-bottom:before {
+  content: "";position: absolute;left: .32rem;top: 4.55rem;height: 5px;width: 100%;border-top: 3px solid var(--primary-color);
+}
 
 /* Responsive adjustments */
 
@@ -413,488 +442,436 @@ a {
 /* Medium screens - change to 2 columns */
 @media (max-width: 845px) {
 
-    body {
-    overflow-x: hidden; 
-    }
+  body {
+  overflow-x: hidden; 
+  }
 
-   H3 {
-    padding-left: 0rem;
-    text-align: left;
-   }
+ H3 {
+  padding-left: 0rem;
+  text-align: left;
+ }
 
-   H2 {
-    width: 100rem;
-   }
+ H2 {
+  width: 100rem;
+ }
 
-    .work,
-    .education,
-    .writing,
-    .video,
-    .interviews,
-    .research,
-    .cycling-results {
-        max-width: 100%;
-    }
- 
+  .work,
+  .education,
+  .writing,
+  .video,
+  .images,
+  .interviews,
+  .research,
+  .cycling-results {
+      max-width: 100%;
+  }
+
 
 /* the overall section properties column structure levers live here */
 
 
 
 
-        .alt-timeline-item {
-        display: grid;
-        grid-template-columns: 3fr .1fr; /* Adjust year column width as needed */
-        grid-template-rows:auto auto;
-        width: 100%;
-        column-gap: calc((var(--screen-width) - 571px) * .16);        
-        row-gap: 0.25rem;
-        padding-left: 1rem;    
-    } 
-    
+      .alt-timeline-item {
+      display: grid;
+      grid-template-columns: 3fr .1fr; /* Adjust year column width as needed */
+      grid-template-rows:auto auto;
+      width: 100%;
+      column-gap: calc((var(--screen-width) - 571px) * .16);        
+      row-gap: 0.25rem;
+      padding-left: 1rem;    
+  } 
+  
 /* the left column and it's child elements live here */
 
-    .year-range {
-        grid-column: 1;
-        grid-row: 1;
-        text-align: left;
-        justify-self: left;
-        padding-right: 0rem;
-        text-wrap: nowrap;
-        white-space: nowrap;
-        width: max-content;
-    }
-    
-    .time {
-        text-wrap: nowrap;
-        white-space: nowrap;
-        padding-right: 1rem;
-    }
+  .year-range {
+      grid-column: 1;
+      grid-row: 1;
+      text-align: left;
+      justify-self: left;
+      padding-right: 0rem;
+      text-wrap: nowrap;
+      white-space: nowrap;
+      width: max-content;
+  }
+  
+  .time {
+      text-wrap: nowrap;
+      white-space: nowrap;
+      padding-right: 1rem;
+  }
 
-    .institution,
-    .position {
-        margin-top: -.5rem;
-    }
-    
+  .institution,
+  .position {
+      margin-top: -.5rem;
+  }
+  
 /* the center column and it's child elements live here */
 
-    .center-column {
-       
-        grid-column: 2;
-        grid-row: 1;
-        text-align: left;
-        margin-left: 6rem;
-        justify-self: center;
-    }
+  .center-column {
+     
+      grid-column: 2;
+      grid-row: 1;
+      text-align: left;
+      margin-left: 6rem;
+      justify-self: center;
+  }
 
-    .alt-center-column { 
-        grid-column: 1;
-        grid-row: 2;
-        text-align: left;
-        margin-left: 0rem;
-        justify-self: start;
-    }
-
-
-    .notable-achievement,
-    .written-work,
-    .video-work,
-    .published-interviews,
-    .research-work,
-    .race-result {
-        text-align: left;
-        min-width: 100px;
-    }
-    
+  .alt-center-column { 
+      grid-column: 1;
+      grid-row: 2;
+      text-align: left;
+      margin-left: 0rem;
+      justify-self: start;
+  }
 
 
+  .notable-achievement,
+  .written-work,
+  .video-work,
+  .images,
+  .published-interviews,
+  .research-work,
+  .race-result {
+      text-align: left;
+      min-width: 100px;
+  }
+  
 
-    .description,
-    .authors {
-        width: 100%;
-       }
 
-       .race-result {
-        margin-left: 0;
-        width: 180%;
-        justify-self:end;
-        min-width: 100px;
-       }
+
+  .description,
+  .authors {
+      width: 100%;
+     }
+
+     .race-result {
+      margin-left: 0;
+      width: 180%;
+      justify-self:end;
+      min-width: 100px;
+     }
 
 /* the right column and it's child elements live here */
 
-    .right-column {
-        grid-column: 2; /* Same column as center */
-        grid-row: 2;
-        text-align: right;
-        justify-self:right;
-        margin-top: 0rem;
-        margin-left: 0rem;
-        padding-left: 0rem;
-    }
+  .right-column {
+      grid-column: 2; /* Same column as center */
+      grid-row: 2;
+      text-align: right;
+      justify-self:right;
+      margin-top: 0rem;
+      margin-left: 0rem;
+      padding-left: 0rem;
+  }
 
-    .concentration,
-    .company {
-        margin-top: -.3rem;
-        text-align: left;
-    }
+  .concentration,
+  .company {
+      margin-top: -.3rem;
+      text-align: left;
+  }
 
-    .source-link {
-        grid-column: 3; /* Same column as center */
-        grid-row: 1;
-        text-align: left;
-        justify-self: end;
-        margin-top: 0rem;
-        margin-left: 0rem;
-        padding-left: 0rem;
-        }
+  .source-link {
+      grid-column: 3; /* Same column as center */
+      grid-row: 1;
+      text-align: left;
+      justify-self: end;
+      margin-top: 0rem;
+      margin-left: 0rem;
+      padding-left: 0rem;
+      }
 
-    .result-highlight {
-        grid-column: 3; /* Same column as center */
-        grid-row: 1;
-        text-align: left;
-        justify-self: center;
-        margin-top: 0rem;
-        margin-left: 0rem;
-        padding-left: 0rem;
-        text-wrap: nowrap;
-        padding: 0em .25em 0em .25em;
-        }
+  .result-highlight {
+      grid-column: 3; /* Same column as center */
+      grid-row: 1;
+      text-align: left;
+      justify-self: center;
+      margin-top: 0rem;
+      margin-left: 0rem;
+      padding-left: 0rem;
+      text-wrap: nowrap;
+      padding: 0em .25em 0em .25em;
+      }
 
-        .alt-result-highlight {
-            grid-column: 2; /* Same column as center */
-            grid-row: 2;
-            text-align: right;
-            justify-self: center;
-            margin-top: 0rem;
-            margin-left: 0rem;
-            padding-left: 0rem;
-            padding: 0em .25em 0em .25em;
-            width: 100%;
-            text-wrap: nowrap;
-            white-space: nowrap;
-        }
+      .alt-result-highlight {
+          grid-column: 2; /* Same column as center */
+          grid-row: 2;
+          text-align: right;
+          justify-self: center;
+          margin-top: 0rem;
+          margin-left: 0rem;
+          padding-left: 0rem;
+          padding: 0em .25em 0em .25em;
+          width: 100%;
+          text-wrap: nowrap;
+          white-space: nowrap;
+      }
 
-        .place-highlight {
-            text-align: right;
-            justify-self: center;
-        }
+      .place-highlight {
+          text-align: right;
+          justify-self: center;
+      }
 
 /* Small screens - change to 1 column */
 @media (max-width: 605px) {
 
-    body {
-        padding: 20px;
-        overflow-x: hidden;
+  body {
+      padding: 20px;
+      overflow-x: hidden;
+  }
+
+
+  .cv-container {
+      max-width: 100%;
+      width: 140%;
+      margin: 0 0;
+      padding: 1.5rem;
+      position: relative; /* Add this to position the continuous border */
     }
-
-
-    .cv-container {
-        max-width: 100%;
-        width: 140%;
-        margin: 0 0;
-        padding: 1.5rem;
-        position: relative; /* Add this to position the continuous border */
-      }
-      .cv-container::before {
-        content: "";
-        position: absolute;
-        top: 20.2rem;
-        bottom: 0;
-        left: 1.5rem;
-        width: 2px;
-        background-color: #faec27;
-        z-index: -10;
-      }
-    
-
-    h2 {
-       /* In single column, let the border span the container width */
-       max-width: none; /* Remove max-width constraint */
-       min-width: 42vw;
-       width: 100%; /* Ensure it takes full available width */
-   }
-
-   .education {
-    max-width: 100%;
-    min-width: 100%;
-   }
-
-   .work {
-    max-width: 100%;
-    min-width: 100%;
-   }
-   .achievements {
-    min-width: 40px;
-   }
-
-   .achievements,
-   .writing,
-   .video,
-   .interviews,
-   .research {
-    max-width: 100%; /* Allow it to expand to the container width */
-    min-width: auto; /* Allow it to shrink if needed */
-    width: 100%; /* Make it the full width of its parent */
-   }
-
-   .timeline-item {
-       /* Single column layout */
-       grid-template-columns: 1.9fr 1fr; /* Full width column */
-       grid-template-rows: auto auto auto; /* Rows for year, center, right */
-       gap: 0rem; /* Adjust row gap */
-       width: 100%;
-       padding-left: 1rem; /* No padding needed */
-   }
-
-   .alt-timeline-item {
-    /* Single column layout */
-    grid-template-columns: 1fr; /* Full width column */
-    grid-template-rows: auto auto auto; /* Rows for year, center, right */
-    gap: 0rem; /* Adjust row gap */
-    width: 130%;
-    padding-left: 1rem; /* No padding needed */
-}
-.institution {
-    text-align: left;
-    justify-self: start;
-}
-
-   .year, .center-column, .right-column {
-       grid-column: 1; /* All in the first column */
-       text-align: left;
-       justify-self: start;
-       margin-left: 0; /* Remove specific margins */
-       width: 100%; /* Ensure full width usage */
-   }
-
-   .year {
-       grid-row: 1;
-       /* margin-left: 0rem; /* Removed fixed margin */
-   }
-
-   .center-column {
-       grid-row: 2;
-       line-height: 1;
-      /* margin-left: 0rem; /* Removed fixed margin */
-   }
-
-   .notable-achievement,
-   .written-work,
-   .video-work,
-   .published-interviews,
-   .research-work,
-   .race-result {
-    text-align: left;
-    margin-left: 0rem;
-    width: 100%;
-}
-
-   .item,
-   .title {
-    min-width: 90%;
-    max-width: 90%;
-   }
-
-   .description,
-   .authors {
-    max-width: 90%;
-    margin-bottom: 1rem;
-
-   }
-
-   .right-column {
-    grid-column: 1;
-       grid-row: 3;
-      /* margin-left: 0rem; /* Removed fixed margin */
-       margin-top: 0; /* Use gap */
-       line-height: 1;
-       margin-bottom: 1rem;
-   }
-
-   .source-link {
-    grid-column: 2; /* Same column as center */
-    grid-row: 2;
-    text-align: left;
-    justify-self: right;
-    margin-top: 0rem;
-    margin-left: 0rem;
-    padding-left: .25rem;
+    .cv-container::before {
+      content: "";
+      position: absolute;
+      top: 20.2rem;
+      bottom: 13.5rem;
+      left: 1.5rem;
+      width: 2px;
+      background-color: #faec27;
+      z-index: -10;
     }
-
-    .place-highlight{
-        grid-column: 2; /* Same column as center */
-        grid-row: 2;
-        text-align: right;
-        justify-self: end;
-        margin-top: 0rem;
-        margin-left: 0rem;
-        padding-left: 0rem;
-        padding: 0em .25em 0em .25em;
-
-    }
-
-    .alt-result-highlight {
-        grid-column: 2; /* Same column as center */
-        grid-row: 2;
-        text-align: right;
-        justify-self: start;
-        margin-top: 0rem;
-        margin-left: 0rem;
-        padding-left: 0rem;
-        width: 100%;
-        text-wrap: nowrap;
-        white-space: nowrap;
-        padding: 0em .25em 0em .25em;
-
-    }
-}
-
-   .company,
-   .concentration{
-        grid-row: 2;
-        text-align: left; /* Ensure left alignment */
-   }
-
-/* Add styles for links if not already present */
-a {
-   color: var(--link-color);
-   text-decoration: none;
-}
-
-a:hover {
-   text-decoration: underline;
-}
-
-/* Small screens - change to 1 column */
-@media (max-width: 356px) {
- 
-    .body {
-        overflow-x: hidden;
-        }
-
-    .cv-container {
-        max-width: 100%;
-        min-width: 200%;
-        width: 140%;
-        margin: 0 0;
-        padding: 1.5rem;
-        position: relative; /* Add this to position the continuous border */
-      }
-      .cv-container::before {
-        content: "";
-        position: absolute;
-        top: 20.2rem;
-        bottom: 0;
-        left: 1.5rem;
-        width: 2px;
-        background-color: #faec27;
-        z-index: -10;
-      }
-    
-
   
 
-    .achievements,
-    .writing,
-    .video,
-    .interviews,
-    .research {
+  h2 {
+     /* In single column, let the border span the container width */
+     max-width: none; /* Remove max-width constraint */
+     min-width: 42vw;
+     width: 100%; /* Ensure it takes full available width */
+ }
 
-     max-width: 100%; /* Allow it to expand to the container width */
-     min-width: 100%; /* Allow it to shrink if needed */
-     width: 100%; /* Make it the full width of its parent */
-    }
- 
-    .timeline-item {
-        /* Single column layout */
-        grid-template-columns: 1.1fr auto; /* Full width column */
-        grid-template-rows: auto auto auto; /* Rows for year, center, right */
-        gap: 0rem; /* Adjust row gap */
-        width: 100%;
-        padding-left: 1rem; /* No padding needed */
-        padding-right: 1rem;
-    }
- 
-    .alt-timeline-item {
+ .education {
+  max-width: 100%;
+  min-width: 100%;
+ }
+
+ .work {
+  max-width: 100%;
+  min-width: 100%;
+ }
+ .achievements {
+  min-width: 40px;
+ }
+
+ .about,
+ .achievements,
+ .writing,
+ .video,
+ .images,
+ .interviews,
+ .research {
+  max-width: 100%; /* Allow it to expand to the container width */
+  min-width: auto; /* Allow it to shrink if needed */
+  width: 100%; /* Make it the full width of its parent */
+ }
+
+ .timeline-item {
      /* Single column layout */
-     grid-template-columns: 1fr; /* Full width column */
+     grid-template-columns: 1.9fr 1fr; /* Full width column */
      grid-template-rows: auto auto auto; /* Rows for year, center, right */
      gap: 0rem; /* Adjust row gap */
      width: 100%;
      padding-left: 1rem; /* No padding needed */
  }
 
- .alt-result-highlight {
-    grid-column: 2; /* Same column as center */
-    grid-row: 2;
-    text-align: right;
-    justify-self: start;
-    margin-top: 0rem;
-    padding-right: 0%;
-    width: 100%;
-    text-wrap: nowrap;
-    white-space: nowrap;
-    padding: 0em .25em 0em .25em;
+ .alt-timeline-item {
+  /* Single column layout */
+  grid-template-columns: 1fr; /* Full width column */
+  grid-template-rows: auto auto auto; /* Rows for year, center, right */
+  gap: 0rem; /* Adjust row gap */
+  width: 130%;
+  padding-left: 1rem; /* No padding needed */
+}
+.institution {
+  text-align: left;
+  justify-self: start;
 }
 
-.cv-footer {
-    width: 100%;
-    height: 5rem;
-    display: grid;
-    position: relative;
-    margin-bottom: rem;
-    margin-top: 0rem;
-    border-top: 2px solid var(--primary-color);
-    padding-top: 0rem;
-    text-align: right;
-    z-index: 1;
-    
+ .year, .center-column, .right-column {
+     grid-column: 1; /* All in the first column */
+     text-align: left;
+     justify-self: start;
+     margin-left: 0; /* Remove specific margins */
+     width: 100%; /* Ensure full width usage */
+ }
+
+ .year {
+     grid-row: 1;
+     /* margin-left: 0rem; /* Removed fixed margin */
+ }
+
+ .center-column {
+     grid-row: 2;
+     line-height: 1;
+    /* margin-left: 0rem; /* Removed fixed margin */
+ }
+
+ .notable-achievement,
+ .written-work,
+ .video-work,
+ .images,
+ .published-interviews,
+ .research-work,
+ .race-result {
+  text-align: left;
+  margin-left: 0rem;
+  width: 100%;
+}
+
+ .item,
+ .title {
+  min-width: 90%;
+  max-width: 90%;
+ }
+
+ .description,
+ .authors {
+  max-width: 90%;
+  margin-bottom: 1rem;
+
+ }
+
+ .right-column {
+  grid-column: 1;
+     grid-row: 3;
+    /* margin-left: 0rem; /* Removed fixed margin */
+     margin-top: 0; /* Use gap */
+     line-height: 1;
+     margin-bottom: 1rem;
+ }
+
+ .source-link {
+  grid-column: 2; /* Same column as center */
+  grid-row: 2;
+  text-align: left;
+  justify-self: right;
+  margin-top: 0rem;
+  margin-left: 0rem;
+  padding-left: .25rem;
   }
 
-  .bottom-contact-email {
-    display:inline-flex;
-    position:absolute;
-    font-size: 10pt;
-    font-style: italic;
-    font-weight: 900;
-    margin-top: 0rem;
-    z-index: 1;
-    color: black;
-    text-decoration: underline;
-    background-color: white;
-    border-bottom: 2pt solid var(--primary-color);
-    border-left: 2pt solid var(--primary-color);
-    border-right: 2pt solid var(--primary-color);
+  .place-highlight{
+      grid-column: 2; /* Same column as center */
+      grid-row: 2;
+      text-align: right;
+      justify-self: end;
+      margin-top: 0rem;
+      margin-left: 0rem;
+      padding-left: 0rem;
+      padding: 0em .25em 0em .25em;
+
   }
 
-.outro {
-    display: grid;
-    position: relative;
-    border-top: 2px #e93423;
-    margin-bottom: var(--section-spacing);
-    font-style: italic;
-    left: 3rem; /* align with other sections */
-    margin-top: 3rem;
-    padding: 0.5rem;
-    line-height: 1;
-    letter-spacing: -.4px;
-    text-align: right;
-    float: left;
+  .alt-result-highlight {
+      grid-column: 2; /* Same column as center */
+      grid-row: 2;
+      text-align: right;
+      justify-self: start;
+      margin-top: 0rem;
+      margin-left: 0rem;
+      padding-left: 0rem;
+      width: 100%;
+      text-wrap: nowrap;
+      white-space: nowrap;
+      padding: 0em .25em 0em .25em;
+
   }
+}
+
+ .company,
+ .concentration{
+      grid-row: 2;
+      text-align: left; /* Ensure left alignment */
+ }
+
+/* Add styles for links if not already present */
+a {
+ color: var(--link-color);
+ text-decoration: none;
+}
+
+a:hover {
+ text-decoration: underline;
+}
+
+Small screens - change to 1 column 
+@media (max-width: 356px) {
+
+  .body {
+      overflow-x: hidden;
+      }
+
+  .cv-container {
+      max-width: 100%;
+      min-width: 200%;
+      width: 140%;
+      margin: 0 0;
+      padding: 1.5rem;
+      position: relative; /* Add this to position the continuous border
+    }/* 
+    .cv-container::before {
+      content: "";
+      position: absolute;
+      top: 20.2rem;
+      bottom: 15rem;
+      left: 1.5rem;
+      width: 2px;
+      background-color: #faec27;
+      z-index: -10;
+    }
   
-  /* Common styles for decorative pseudo-elements */
-  div.outro-top:before {
-    content: "";position: absolute;left: 6.8rem; top: -3rem;height: 5px;width: 46.5%;border-top: 3px solid var(--primary-color);
-  }
-  
-  div.outro-right:before {
-    content: "";position: absolute; left: 6.3rem;top: -0.7rem;height: 1.7rem;width: 50%;border-right: 3px solid var(--primary-color);
-  }
 
-  div.outro-left:before {
-    content: "";position: absolute;left:-8.6rem;top: 1rem;height: 4rem; width: 50%;border-right: 3px solid var(--secondary-color);
+
+
+  .about,
+  .achievements,
+  .writing,
+  .video,
+  .images,
+  .interviews,
+  .research {
+
+   max-width: 100%; /* Allow it to expand to the container width */
+   min-width: 100%; /* Allow it to shrink if needed */
+   width: 100%; /* Make it the full width of its parent */
   }
-  div.outro-bottom:before {
-    content: "";position: absolute;left: -3rem;top: 4.9rem;height: 5px;width: 50%;border-top: 3px solid var(--secondary-color);
-  }
+/*
+  .timeline-item {
+       Single column layout
+      grid-template-columns: 1.1fr auto; /* Full width column */
+      grid-template-rows: auto auto auto; /* Rows for year, center, right */
+      gap: 0rem; /* Adjust row gap */
+      width: 100%;
+      padding-left: 1rem; /* No padding needed */
+      padding-right: 1rem;
+  } */
+
+  .alt-timeline-item {
+   /* Single column layout */
+   grid-template-columns: 1fr; /* Full width column */
+   grid-template-rows: auto auto auto; /* Rows for year, center, right */
+   gap: 0rem; /* Adjust row gap */
+   width: 100%;
+   padding-left: 1rem; /* No padding needed */
+}
+
+.alt-result-highlight {
+  grid-column: 2; /* Same column as center */
+  grid-row: 2;
+  text-align: right;
+  justify-self: start;
+  margin-top: 0rem;
+  padding-right: 0%;
+  width: 100%;
+  text-wrap: nowrap;
+  white-space: nowrap;
+  padding: 0em .25em 0em .25em;
+}
+*/ */
+
