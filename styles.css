@@ -25,6 +25,7 @@ body {
   overflow-x: hidden; /* Prevent horizontal scrolling */
   width: 100%;
   background-color: #fdfdfd;
+  overscroll-behavior: none;
 }
 
 h1{
