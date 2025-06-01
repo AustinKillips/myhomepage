@@ -390,8 +390,8 @@ background: #fdfdfd; /* optional: helps visibility */
   font-style: italic;
   font-weight: 900;
   right: absolute;    
-  margin-top: -.3rem;
-  margin-right: .16rem;
+  margin-top: -.5rem;
+    margin-right: .15rem;
   z-index: 0;
   color: black;
   text-decoration: ;
