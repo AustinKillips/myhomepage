@@ -413,6 +413,8 @@ background: #fdfdfd; /* optional: helps visibility */
   text-align: left;
   float: right;
   align-items: flex-end;
+  z-index: 1;
+
 
 }
 /* Common styles for decorative pseudo-elements */
