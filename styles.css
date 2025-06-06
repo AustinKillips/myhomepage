@@ -367,7 +367,7 @@ h1.contact-title {
   color: black;
   transition: opacity 3s ease-out;
   text-align: center;
-  font-size: 30pt;
+  font-size: clamp(16pt, 2.5vw, 30pt);
   
   /* Position absolutely within the popup content container */
   position: absolute;
@@ -382,11 +382,6 @@ h1.contact-title {
   z-index: 10; /* Above the form but within the popup */
 }
 
-/* When the success message is shown, change display to flex */
-.success-message.show {
-  display:flex;
-  border:2px solid var(--primary-color);
-}
 
 /* this is 3/4 red border box with my email */
 
