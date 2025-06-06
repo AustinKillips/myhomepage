@@ -142,11 +142,247 @@ a:hover {
   right: absolute;    
 
 }
+/* this is my contact window popup */
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 18.2rem;
+  left: 0rem;
+  width: 100%;
+  height: 100%;
+  max-height: 402px;
+  z-index: 1000;
+  border: 2px red;
+}
+
+.popup-overlay.active {
+  display: flex; /* Changed to flex for centering */
+  align-items: flex-start; /* Align to top since you have top: 19rem */
+  justify-content: center; /* Center horizontally */
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+/* Popup Content - Now centered on cv-container */
+.popup-content {
+  display: block;
+  position: relative;
+  background: white;
+  padding: 3rem 3.2rem 3.7rem 3rem;
+  /* Match your cv-container dimensions */
+  max-width: 904px;
+  min-width: 345px;
+  width: calc(100% - 8.6rem); /* Account for side margins */
+  margin: 0rem 3rem; /* Same margin as cv-container */
+  overflow-y: hidden;
+  border-left: 2px solid #faec27;
+  border-top: 2px solid #e93423;
+  border-bottom: 2px solid #e93423;
+  z-index: 10000;
+  overflow-x: hidden;
+  max-height: 402px;
+
+}
+
+.popup-content::before {
+  content: "";
+  position: absolute;
+  top: 22rem;
+  bottom: 22rem;
+  left: 3rem; /* Match your cv-container::before */
+  width: 2px;
+  background-color: #faec27;
+  z-index: 10000;
+}
+
+
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 0px;
+  background: none;
+  border: none;
+  font-size: 30pt;
+  cursor: pointer;
+  color: black;
+  line-height: 1;
+  transition: transform 0.6s ease, color 0.2s ease;
+  cursor: pointer;
+  user-select: none;
+}
+
+.close-btn:hover {
+  color: #1155cc;
+  transition: transform .02s cubic-bezier(0.68, -0.55, 0.265, 1.55), color 0.2s ease;
+}
+
+/* Contact Section Styles */
+.contact-section {
+  width: 100%;
+  max-height: 336px;
+}
+
+.contact-intro {
+  text-align: left;
+  margin-bottom: 10px;
+  line-height: 1;
+  margin-top: -1.5rem;
+  height: 100%;
+  padding-left: 0;
+}
+
+h1.contact-title {
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 1.6;
+  color: #333;
+  border: none;
+}
+
+.contact-description {
+  color: #666;
+  font-size: 16px;
+  margin: 0;
+}
+
+.contact-form {
+  width: 100%;
+}
+
+.form-group-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  margin-bottom: 0px;
+  width: 105%;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label-email {
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.form-label-message {
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.form-input {
+  max-width: 300px;
+  padding: 12px;
+  padding-right: 0rem;
+  font-size: 14px;
+  box-sizing: border-box;
+  transition: border-color 0s ease;
+  border-left: 2px solid #e93423;
+  border-right: 2px white ;
+  border-bottom: 2px  #e93423;
+  border-top: 2px solid #e93423;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  border-left: 2px solid #e93423;
+}
+
+.form-textarea {
+  max-width: 516px;
+  min-width: ;
+  resize: vertical;
+  min-height: 170px;
+  font-family: inherit;
+  border-left: 2px solid #e93423;
+  border-right: 2px solid #e93423;
+  border-bottom: 2px  #e93423;
+  border-top: 2px solid #e93423;
+  padding: 12px;
+  font-size: 14px;
+  box-sizing: border-box;
+  transition: border-color 0 ease;
+  scrollbar-width: thin;
+  scrollbar-color: #1155CC transparent;
+  line-height: 1;
+  resize: none;
+
+}
+
+.form-submit {
+  padding: 8px 8px;
+  margin-left: 32.13rem;
+  border-left: 2px solid #e93423;
+  border-bottom: 2px solid #e93423;
+  border-right: 2px  #e93423;
+  border-top: 2px  #e93423;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0s ease;
+  max-width: 10rem;
+  width: 100%;
+  background-color: white;
+  color: black;
+  text-align: left;
+  box-sizing: border-box;
+  display: block;
+  position: relative;
+}
+
+.form-submit:hover {
+  background-color: #00ff00;
+  color: black;
+  border-left: 2px solid #1155cc;
+  border-bottom: 2px solid #1155cc;
+}
+
+/* Success Message */
+.success-message {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    background-color: white; /* Add background like other elements */
+    color: black;
+    transition: opacity 3s ease-out;
+    text-align: center;
+    font-size: 36pt;
+    
+    /* Match the popup-content container sizing */
+    width: 100%; /* Take full width of parent container */
+    height: 100%; /* Take full height of parent container */
+    max-width: none; /* Remove conflicting max-width */
+    max-height: none; /* Remove conflicting max-height */
+    
+    /* Remove conflicting positioning */
+    position: absolute; /* Position relative to popup-content */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+    opacity: 1;
+    z-index: 10;
+}
 
 /* this is 3/4 red border box with my email */
 
 .headerpopout {
-  display: flex;
+  display: flex;dfgjk;g;skfjs;fjsd;fj
   position: absolute;
   right: absolute;    
 
