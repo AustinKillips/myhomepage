@@ -74,16 +74,18 @@
     }
 </style>
 <body>
+    
 <main class="cv-container">
     <header class="cv-header">
        <h3>DIGITAL REPOSITORY FOR:</h3>
        <h1>AUSTIN KILLIPS  </h1>
+       
        <section class="headpopout">
         <a href="#" class="secondstyle contact-email" id="openPopup">say hi</a> 
     </section>
 
-    <br>
-      <!-- Popup Overlay -->
+   
+   <!-- Popup Overlay -->
    <div class="popup-overlay" id="popupOverlay">
     <div class="popup-content"> 
         <button class="close-btn" id="closePopup">&times;</button>
@@ -138,6 +140,11 @@ I'm all ears for whatever you care to share" required></textarea>
         </section>
     </div>
 </div>
+
+    </header>  
+
+    <br>
+    
     <section class="intro">
       <p class="borderbox"> Hi, <br>my name is Austin <br> and this is a collection <br>of things I have done.</p>
     <div class="top"></div>
@@ -591,7 +598,7 @@ I'm all ears for whatever you care to share" required></textarea>
       </h3>
         </div>
       <div class="source-link">
-          <div class="link"><a href="assets/Pitchdeck final v6.pdf">LINK</a>
+          <div class="link"><a href="Pitchdeck final v6.pdf">LINK</a>
       </div>
   </div>
   </div>
@@ -1874,7 +1881,7 @@ I'm all ears for whatever you care to share" required></textarea>
           </div>
         </div>
 </section>
-<hr style="margin: rem ; height:2px; width:100.5%; border-top: 2px solid #e93423 ">
+<hr class=line style="margin: rem ; height:2px; width:100.5%; border-top: 2px solid #e93423 ">
 
       <section class="outro">
         <p class="outro-borderbox"> Thank you for reading<br>If you have any questions<br>or just want to chat<br>please say hello
@@ -1887,202 +1894,202 @@ I'm all ears for whatever you care to share" required></textarea>
         <section class="cv-footer">
             <a href="mailto:hello@austinkillips.com" class="bottom-contact-email" >hello@austinkillips.com </a> 
             </section>
-            <script>
-                document.addEventListener('DOMContentLoaded', function() {
-                    const sectionHeaders = document.querySelectorAll('.section-header');
-                    
-                    sectionHeaders.forEach(header => {
-                        header.addEventListener('click', function() {
-                            const sectionName = this.getAttribute('data-section');
-                            const content = document.getElementById(sectionName + '-content');
-    
-                            
-                            if (content) {
-                                this.classList.toggle('expanded');
-                                content.classList.toggle('expanded');
-                                
-                                // Generate random rotation when expanding
-                                if (this.classList.contains('expanded')) {
-                                    const randomRotation = Math.random() * 360; // 0 to 360 degrees
-                                    this.style.setProperty('--random-rotation', `${randomRotation}deg`);
-                                }
-                            }
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const sectionHeaders = document.querySelectorAll('.section-header');
+                
+                sectionHeaders.forEach(header => {
+                    header.addEventListener('click', function() {
+                        const sectionName = this.getAttribute('data-section');
+                        const content = document.getElementById(sectionName + '-content');
+
                         
-                        });
-                    });
-                    
-                    // Keyboard support
-                    sectionHeaders.forEach(header => {
-                        header.setAttribute('tabindex', '0');
-                        header.addEventListener('keydown', function(e) {
-                            if (e.key === 'Enter' || e.key === ' ') {
-                                e.preventDefault();
-                                this.click();
+                        if (content) {
+                            this.classList.toggle('expanded');
+                            content.classList.toggle('expanded');
+                            
+                            // Generate random rotation when expanding
+                            if (this.classList.contains('expanded')) {
+                                const randomRotation = Math.random() * 360; // 0 to 360 degrees
+                                this.style.setProperty('--random-rotation', `${randomRotation}deg`);
                             }
-                        });
+                        }
+                    
                     });
                 });
-    
                 
-                </script>
-    
-                <script>
-     // Get elements
-    const openPopupBtn = document.getElementById('openPopup');
-    const closePopupBtn = document.getElementById('closePopup');
-    const popupOverlay = document.getElementById('popupOverlay');
-    const form = document.getElementById('form');
-    const successMessage = document.getElementById('successMessage');
-    
-    // Store original text for restoration
-    const originalOutroText = 'Thank you for reading<br>If you have any questions<br>or just want to chat<br>please say hello';
-    
-    const originalBorderboxText = 'Hi, <br>my name is Austin <br> and this is a collection <br>of things I have done.';
-    
-    // Random rotation function for close button
-    function applyRandomRotation(element) {
-        const randomRotation = Math.floor(Math.random() * 360);
-        element.style.transform = `rotate(${randomRotation}deg)`;
-    }
-    
-    // Apply random rotation to close button on page load
-    if (closePopupBtn) {
-        applyRandomRotation(closePopupBtn);
-    }
-    
-    // Open popup
-    openPopupBtn.addEventListener('click', function(e) {
-        e.preventDefault();
-        popupOverlay.classList.add('active');
-        document.body.style.overflow = 'hidden'; // Prevent background scrolling
-    
-        // Hide all '+' signs when popup opens
-        const plusSigns = document.querySelectorAll('.section-header, .line');
-        plusSigns.forEach(sign => {
-            sign.style.visibility = 'hidden';
-        });
-        
-        // Collapse all expanded sections when popup opens
-        const expandedHeaders = document.querySelectorAll('.section-header.expanded');
-        const expandedContents = document.querySelectorAll('[id$="-content"].expanded');
-        
-        expandedHeaders.forEach(header => {
-            header.classList.remove('expanded');
-        });
-        
-        expandedContents.forEach(content => {
-            content.classList.remove('expanded');
-        });
-        
-        // Change the outro text when popup opens
-        const outroBorderbox = document.querySelector('.outro-borderbox');
-        if (outroBorderbox) {
-            outroBorderbox.innerHTML = 'oh hey,<br>thank you for writing<br>and for making the words<br>that were here irrelevant';
-        }
-    
-        const borderbox = document.querySelector('.borderbox');
-        if (borderbox) {
-            borderbox.innerHTML = 'Well, I guess... <br>choosing to say hi<br> makes this more <br>about us than me';
-        }
-        
-        // Apply new random rotation when popup opens
-        applyRandomRotation(closePopupBtn);
-    });
-    
-    // Close popup function
-    function closePopup() {
-        popupOverlay.classList.remove('active');
-        document.body.style.overflow = 'auto'; // Restore scrolling
-        const contactForm = document.querySelector('.contact-form');
-        if (contactForm) {
-            contactForm.reset(); // Clear form
-        }
-        if (successMessage) {
-            successMessage.style.display = 'none'; // Hide success message
-        }
-        
-        // Show all '+' signs when popup closes
-        const plusSigns = document.querySelectorAll('.section-header, .line');
-        plusSigns.forEach(sign => {
-            sign.style.visibility = 'visible';
-        });
-        
-        // Restore original outro text when popup closes
-        const outroBorderbox = document.querySelector('.outro-borderbox');
-        if (outroBorderbox) {
-            outroBorderbox.innerHTML = originalOutroText;
-        }
-    
-         // Restore original borderbox text when popup closes
-         const borderbox = document.querySelector('.borderbox');
-         if (borderbox) {
-                 borderbox.innerHTML = originalBorderboxText;
-            }
-    }
-    
-    // Close button event listener
-    closePopupBtn.addEventListener('click', closePopup);
-    
-    // Add hover effects to close button
-    closePopupBtn.addEventListener('mouseenter', function() {
-        // Change to dash and apply new random rotation
-        this.textContent = '–';
-        applyRandomRotation(this);
-    });
-    
-    closePopupBtn.addEventListener('mouseleave', function() {
-        // Change back to X and apply new random rotation
-        this.textContent = '×';
-        applyRandomRotation(this);
-    });
-    
-    // Optional: Apply new rotation on click
-    closePopupBtn.addEventListener('click', function() {
-        applyRandomRotation(this);
-    });
-    
-    // Close popup when clicking outside the form
-    popupOverlay.addEventListener('click', function(e) {
-        if (e.target === popupOverlay) {
-            closePopup();
-        }
-    });
-    
-    // Close popup with Escape key
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && popupOverlay.classList.contains('active')) {
-            closePopup();
-        }
-    });
-    
-    // Handle form submission
-    const contactForm = document.querySelector('.contact-form');
-    contactForm.addEventListener('submit', async function(e) {
-        e.preventDefault();
-        
-        const formData = new FormData(contactForm);
-        
-        try {
-            const response = await fetch('https://api.web3forms.com/submit', {
-                method: 'POST',
-                body: formData
+                // Keyboard support
+                sectionHeaders.forEach(header => {
+                    header.setAttribute('tabindex', '0');
+                    header.addEventListener('keydown', function(e) {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                            e.preventDefault();
+                            this.click();
+                        }
+                    });
+                });
             });
+
             
-            if (response.ok) {
-                successMessage.style.display = 'block';
-                contactForm.style.display = 'none';
-                setTimeout(() => {
-                    closePopup();
-                    contactForm.style.display = 'block';
-                }, 2000);
-            } else {
-                alert('Oh no! Something went wrong, can you try sending again? My apologies if some words and thoughts vanished into the ether');
-            }
-        } catch (error) {
-            console.error('Error:', error);
+            </script>
+
+            <script>
+ // Get elements
+const openPopupBtn = document.getElementById('openPopup');
+const closePopupBtn = document.getElementById('closePopup');
+const popupOverlay = document.getElementById('popupOverlay');
+const form = document.getElementById('form');
+const successMessage = document.getElementById('successMessage');
+
+// Store original text for restoration
+const originalOutroText = 'Thank you for reading<br>If you have any questions<br>or just want to chat<br>please say hello';
+
+const originalBorderboxText = 'Hi, <br>my name is Austin <br> and this is a collection <br>of things I have done.';
+
+// Random rotation function for close button
+function applyRandomRotation(element) {
+    const randomRotation = Math.floor(Math.random() * 360);
+    element.style.transform = `rotate(${randomRotation}deg)`;
+}
+
+// Apply random rotation to close button on page load
+if (closePopupBtn) {
+    applyRandomRotation(closePopupBtn);
+}
+
+// Open popup
+openPopupBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    popupOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+
+    // Hide all '+' signs when popup opens
+    const plusSigns = document.querySelectorAll('.section-header, .line');
+    plusSigns.forEach(sign => {
+        sign.style.visibility = 'hidden';
+    });
+    
+    // Collapse all expanded sections when popup opens
+    const expandedHeaders = document.querySelectorAll('.section-header.expanded');
+    const expandedContents = document.querySelectorAll('[id$="-content"].expanded');
+    
+    expandedHeaders.forEach(header => {
+        header.classList.remove('expanded');
+    });
+    
+    expandedContents.forEach(content => {
+        content.classList.remove('expanded');
+    });
+    
+    // Change the outro text when popup opens
+    const outroBorderbox = document.querySelector('.outro-borderbox');
+    if (outroBorderbox) {
+        outroBorderbox.innerHTML = 'oh hey,<br>thank you for writing <br> and for making the words <br> that were here irrelevant';
+    }
+
+    const borderbox = document.querySelector('.borderbox');
+    if (borderbox) {
+        borderbox.innerHTML = 'Well, I guess... <br>choosing to say hi<br> makes this more <br>about us than me';
+    }
+    
+    // Apply new random rotation when popup opens
+    applyRandomRotation(closePopupBtn);
+});
+
+// Close popup function
+function closePopup() {
+    popupOverlay.classList.remove('active');
+    document.body.style.overflow = 'auto'; // Restore scrolling
+    const contactForm = document.querySelector('.contact-form');
+    if (contactForm) {
+        contactForm.reset(); // Clear form
+    }
+    if (successMessage) {
+        successMessage.style.display = 'none'; // Hide success message
+    }
+    
+    // Show all '+' signs when popup closes
+    const plusSigns = document.querySelectorAll('.section-header, .line');
+    plusSigns.forEach(sign => {
+        sign.style.visibility = 'visible';
+    });
+    
+    // Restore original outro text when popup closes
+    const outroBorderbox = document.querySelector('.outro-borderbox');
+    if (outroBorderbox) {
+        outroBorderbox.innerHTML = originalOutroText;
+    }
+
+     // Restore original borderbox text when popup closes
+     const borderbox = document.querySelector('.borderbox');
+     if (borderbox) {
+             borderbox.innerHTML = originalBorderboxText;
+        }
+}
+
+// Close button event listener
+closePopupBtn.addEventListener('click', closePopup);
+
+// Add hover effects to close button
+closePopupBtn.addEventListener('mouseenter', function() {
+    // Change to dash and apply new random rotation
+    this.textContent = '–';
+    applyRandomRotation(this);
+});
+
+closePopupBtn.addEventListener('mouseleave', function() {
+    // Change back to X and apply new random rotation
+    this.textContent = '×';
+    applyRandomRotation(this);
+});
+
+// Optional: Apply new rotation on click
+closePopupBtn.addEventListener('click', function() {
+    applyRandomRotation(this);
+});
+
+// Close popup when clicking outside the form
+popupOverlay.addEventListener('click', function(e) {
+    if (e.target === popupOverlay) {
+        closePopup();
+    }
+});
+
+// Close popup with Escape key
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && popupOverlay.classList.contains('active')) {
+        closePopup();
+    }
+});
+
+// Handle form submission
+const contactForm = document.querySelector('.contact-form');
+contactForm.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    
+    const formData = new FormData(contactForm);
+    
+    try {
+        const response = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            body: formData
+        });
+        
+        if (response.ok) {
+            successMessage.style.display = 'block';
+            contactForm.style.display = 'none';
+            setTimeout(() => {
+                closePopup();
+                contactForm.style.display = 'block';
+            }, 2000);
+        } else {
             alert('Oh no! Something went wrong, can you try sending again? My apologies if some words and thoughts vanished into the ether');
         }
-    });
-                </script>
+    } catch (error) {
+        console.error('Error:', error);
+        alert('Oh no! Something went wrong, can you try sending again? My apologies if some words and thoughts vanished into the ether');
+    }
+});
+            </script>
 </body>
 </html>
