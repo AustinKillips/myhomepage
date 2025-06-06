@@ -96,6 +96,10 @@ a:hover {
   z-index: -10;
 }
 
+.cv-container.hide-line::before {
+  display: none;
+}
+
 .cv-header {
   display: inline-flex;
   flex-direction: column;
@@ -145,14 +149,16 @@ a:hover {
 
 .popup-overlay {
   display: none;
-  position: fixed;
-  top: 18.2rem;
+  position: absolute;
+  top: 16.9rem;
   left: 0rem;
   width: 100%;
   height: 100%;
   max-height: 402px;
+  max-width: ;
   z-index: 1000;
   border: 2px red;
+  padding-right: -30rem;
 }
 
 .popup-overlay.active {
@@ -163,7 +169,6 @@ a:hover {
   margin-block-end: 0.83em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
-  position: fixed;
 }
 
 /* Popup Content - Now centered on cv-container */
@@ -174,7 +179,7 @@ a:hover {
   padding: 3rem 3.2rem 3.9rem 3rem;
   /* Match your cv-container dimensions */
   max-width: 904px;
-  width: calc(100% - 8.6rem); /* Account for side margins */
+  width: calc(100% - 0rem); /* Account for side margins */
   margin: 0rem 3rem; /* Same margin as cv-container */
   overflow-y: hidden;
   border-left: 2px solid #faec27;
@@ -380,6 +385,7 @@ h1.contact-title {
 /* When the success message is shown, change display to flex */
 .success-message.show {
   display:flex;
+  border:2px solid var(--primary-color);
 }
 
 /* this is 3/4 red border box with my email */
@@ -688,11 +694,11 @@ div.outro-bottom:before {
 
 /* Adjustments for popup state */
 .outro.popup-active div.outro-top:before {
-left: -1rem; width: 115%; 
+left: -1.2rem; width: 115%; 
 }
 
 .outro.popup-active div.outro-right:before {
-  left: 5rem; top: -4.25rem
+  left: 4.95rem; top: -4.3rem; height: 3.6rem;
 }
 
 .outro.popup-active div.outro-left2:before {
@@ -727,10 +733,6 @@ left: -1rem; width: 115%;
   width: 100rem;
  }
 
- .popup-content {
-  margin: 0 2rem; /* Smaller margins on smaller screens */
-  width: calc(100% - 8.5rem);
-}
 
 .form-submit {
   margin-left: 0rem;
@@ -923,23 +925,17 @@ left: -1rem; width: 115%;
       background-color: #faec27;
       z-index: -10;
     }
-  
-    .popup-content {
-      margin: 0 1rem;
-      width: calc(100% - 5.5rem);
-      padding-left: 3rem; /* Reduce left padding on mobile */
-      margin-top: -1.5rem;
-    }
-    
-    .popup-content::before {
-      left: 1rem; /* Adjust yellow line position */
-    }
+ 
   
     h1.contact-title {
       font-size: clamp(1.3125rem, 5.5vw, 1.75rem); /* 1.75rem down to 1.3125rem (25% reduction) */
     }
 
     p {
+    }
+
+    .popup-content {
+      margin: -1.6rem 1.5rem 0 1.5rem;
     }
 
  .education {
@@ -1150,36 +1146,9 @@ Small screens - change to 1 column
       padding-left: 1rem; /* No padding needed */
       padding-right: 1rem;
   } */
-  .popup-content {
-    display: block;
-    position: relative;
-    background: white;
-    padding: 3rem 3.2rem 3.9rem 3rem;
-    /* Match your cv-container dimensions */
-    max-width: 904px;
-    min-width: 345px;
-    width: calc(100% - 9.6rem); /* Account for side margins */
-    margin: 0rem 3rem; /* Same margin as cv-container */
-    overflow-y: hidden;
-    border-left: 2px solid #faec27;
-    border-top: 2px solid #e93423;
-    border-bottom: 2px solid #e93423;
-    z-index: 10000;
-    overflow-x: hidden;
-    max-height: 402px;
-  
-  }
 
-  .popup-content::before {
-    content: "";
-    position: absolute;
-    top: 22rem;
-    bottom: 22rem;
-    left: 10rem; /* Match your cv-container::before */
-    width: 2px;
-    background-color: #faec27;
-    z-index: 10000;
-  }
+  
+
   .alt-timeline-item {
    /* Single column layout */
    grid-template-columns: 1fr; /* Full width column */
@@ -1201,3 +1170,4 @@ Small screens - change to 1 column
   white-space: nowrap;
   padding: 0em .25em 0em .25em;
 }
+
