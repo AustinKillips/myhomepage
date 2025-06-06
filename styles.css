@@ -383,6 +383,10 @@ h1.contact-title {
 }
 
 
+/* When the success message is shown, change display to flex */
+.success-message.show {
+  display:flex;
+}
 /* this is 3/4 red border box with my email */
 
 .headerpopout {
