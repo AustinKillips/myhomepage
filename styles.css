@@ -891,7 +891,7 @@ left: -1rem; width: 115%;
           text-align: right;
           justify-self: center;
       }
-
+    }
 /* Small screens - change to 1 column */
 @media (max-width: 605px) {
 
@@ -1201,6 +1201,3 @@ Small screens - change to 1 column
   white-space: nowrap;
   padding: 0em .25em 0em .25em;
 }
-
-
-*/ */
