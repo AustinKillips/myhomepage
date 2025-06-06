@@ -33,7 +33,6 @@ body {
   overflow-x: hidden; /* Prevent horizontal scrolling */
   width: 100%;
   background-color: #fdfdfd;
-  overscroll-behavior: none;
 }
 
 h1{
@@ -142,7 +141,8 @@ a:hover {
   right: absolute;    
 
 }
-/* this is my contact window popup */
+
+
 .popup-overlay {
   display: none;
   position: fixed;
@@ -170,10 +170,9 @@ a:hover {
   display: block;
   position: relative;
   background: white;
-  padding: 3rem 3.2rem 3.7rem 3rem;
+  padding: 3rem 3.2rem 3.9rem 3rem;
   /* Match your cv-container dimensions */
   max-width: 904px;
-  min-width: 345px;
   width: calc(100% - 8.6rem); /* Account for side margins */
   margin: 0rem 3rem; /* Same margin as cv-container */
   overflow-y: hidden;
@@ -243,9 +242,9 @@ h1.contact-title {
   border: none;
 }
 
-.contact-description {
-  color: #666;
-  font-size: 16px;
+.contact-subtitle {
+  color: #333;
+  font-size: clamp(12px, 1.2vw + 0.5rem, 16px);
   margin: 0;
 }
 
@@ -350,6 +349,8 @@ h1.contact-title {
 }
 
 /* Success Message */
+
+
 .success-message {
   box-sizing: border-box;
   display: none; /* Hide by default */
@@ -384,7 +385,7 @@ h1.contact-title {
 /* this is 3/4 red border box with my email */
 
 .headerpopout {
-  display: flex;dfgjk;g;skfjs;fjsd;fj
+  display: flex;
   position: absolute;
   right: absolute;    
 
@@ -672,7 +673,7 @@ div.outro-top:before {
 }
 
 div.outro-right:before {
-  content: "";position: absolute; left: 5.4rem;top: -4.2rem;height: 3.4rem;width: 50%;border-right: 3px solid var(--secondary-color);
+  content: "";position: absolute; left: 5.35rem;top: -4.2rem;height: 3.4rem;width: 50%;border-right: 3px solid var(--secondary-color);
 }
 div.outro-left2:before {
   content: "";position: absolute; left: -6rem;top: -.9rem;height: 1.8rem;width: 50%;border-right: 3px solid var(--secondary-color);
@@ -683,6 +684,28 @@ div.outro-left:before {
 }
 div.outro-bottom:before {
   content: "";position: absolute;left: -.035rem;top: 4.55rem;height: 5px;width: 106.7% ;border-top: 3px solid var(--primary-color);
+}
+
+/* Adjustments for popup state */
+.outro.popup-active div.outro-top:before {
+left: -1rem; width: 115%; 
+}
+
+.outro.popup-active div.outro-right:before {
+  left: 5rem; top: -4.25rem
+}
+
+.outro.popup-active div.outro-left2:before {
+}
+
+.outro.popup-active div.outro-left:before {
+  
+}
+
+
+.outro.popup-active div.outro-bottom:before {
+  left: -.6rem; width: 115.8%; 
+
 }
 
 /* Responsive adjustments */
@@ -703,6 +726,15 @@ div.outro-bottom:before {
  H2 {
   width: 100rem;
  }
+
+ .popup-content {
+  margin: 0 2rem; /* Smaller margins on smaller screens */
+  width: calc(100% - 8.5rem);
+}
+
+.form-submit {
+  margin-left: 0rem;
+}
 
   .work,
   .education,
@@ -868,7 +900,12 @@ div.outro-bottom:before {
       overflow-x: hidden;
   }
 
-
+  h2 {
+     /* In single column, let the border span the container width */
+     max-width: none; /* Remove max-width constraint */
+     min-width: 42vw;
+     width: 100%; /* Ensure it takes full available width */
+ }
   .cv-container {
       max-width: 100%;
       width: 140%;
@@ -887,13 +924,23 @@ div.outro-bottom:before {
       z-index: -10;
     }
   
+    .popup-content {
+      margin: 0 1rem;
+      width: calc(100% - 5.5rem);
+      padding-left: 3rem; /* Reduce left padding on mobile */
+      margin-top: -1.5rem;
+    }
+    
+    .popup-content::before {
+      left: 1rem; /* Adjust yellow line position */
+    }
+  
+    h1.contact-title {
+      font-size: clamp(1.3125rem, 5.5vw, 1.75rem); /* 1.75rem down to 1.3125rem (25% reduction) */
+    }
 
-  h2 {
-     /* In single column, let the border span the container width */
-     max-width: none; /* Remove max-width constraint */
-     min-width: 42vw;
-     width: 100%; /* Ensure it takes full available width */
- }
+    p {
+    }
 
  .education {
   max-width: 100%;
@@ -1062,7 +1109,10 @@ Small screens - change to 1 column
       width: 140%;
       margin: 0 0;
       padding: 1.5rem;
-      position: relative; /* Add this to position the continuous border
+      position: relative; 
+
+      
+      /* Add this to position the continuous border
     }/* 
     .cv-container::before {
       content: "";
@@ -1100,7 +1150,36 @@ Small screens - change to 1 column
       padding-left: 1rem; /* No padding needed */
       padding-right: 1rem;
   } */
+  .popup-content {
+    display: block;
+    position: relative;
+    background: white;
+    padding: 3rem 3.2rem 3.9rem 3rem;
+    /* Match your cv-container dimensions */
+    max-width: 904px;
+    min-width: 345px;
+    width: calc(100% - 9.6rem); /* Account for side margins */
+    margin: 0rem 3rem; /* Same margin as cv-container */
+    overflow-y: hidden;
+    border-left: 2px solid #faec27;
+    border-top: 2px solid #e93423;
+    border-bottom: 2px solid #e93423;
+    z-index: 10000;
+    overflow-x: hidden;
+    max-height: 402px;
+  
+  }
 
+  .popup-content::before {
+    content: "";
+    position: absolute;
+    top: 22rem;
+    bottom: 22rem;
+    left: 10rem; /* Match your cv-container::before */
+    width: 2px;
+    background-color: #faec27;
+    z-index: 10000;
+  }
   .alt-timeline-item {
    /* Single column layout */
    grid-template-columns: 1fr; /* Full width column */
@@ -1122,4 +1201,6 @@ Small screens - change to 1 column
   white-space: nowrap;
   padding: 0em .25em 0em .25em;
 }
+
+
 */ */
