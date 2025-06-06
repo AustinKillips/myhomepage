@@ -2015,7 +2015,7 @@ if (closePopupBtn) {
 openPopupBtn.addEventListener('click', function(e) {
     e.preventDefault();
     popupOverlay.classList.add('active');
-    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    document.body.style.overflow = ''; // 
 
     // Hide all '+' signs when popup opens
     const plusSigns = document.querySelectorAll('.section-header, .line');
@@ -2062,7 +2062,7 @@ function closePopup() {
     saveFormData();
     
     popupOverlay.classList.remove('active');
-    document.body.style.overflow = 'auto'; // Restore scrolling
+    document.body.style.overflow = ''; 
     
     if (successMessage) {
         successMessage.classList.remove('show'); // Hide success message using class
