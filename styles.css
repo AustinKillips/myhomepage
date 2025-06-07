@@ -590,7 +590,7 @@ font-size: clamp(12px, 3.5vw, 16px) !important;
 .alt-result-highlight,
 .result-highlight {
   font-size: 17px;
-  padding: 0em .25em 0em .25em;
+  padding: .25em;
   font-weight: 550;
 }
 
@@ -871,7 +871,7 @@ left: -1.2rem; width: 115%;
       margin-left: 0rem;
       padding-left: 0rem;
       text-wrap: nowrap;
-      padding: 0em .25em 0em .25em;
+      padding:.25em;
       }
 
       .alt-result-highlight {
@@ -882,7 +882,7 @@ left: -1.2rem; width: 115%;
           margin-top: 0rem;
           margin-left: 0rem;
           padding-left: 0rem;
-          padding: 0em .25em 0em .25em;
+          padding:.25em;
           width: 100%;
           text-wrap: nowrap;
           white-space: nowrap;
@@ -1055,7 +1055,7 @@ left: -1.2rem; width: 115%;
       margin-top: 0rem;
       margin-left: 0rem;
       padding-left: 0rem;
-      padding: 0em .25em 0em .25em;
+      padding: .25em;
 
   }
 
@@ -1070,7 +1070,7 @@ left: -1.2rem; width: 115%;
       width: 100%;
       text-wrap: nowrap;
       white-space: nowrap;
-      padding: 0em .25em 0em .25em;
+      padding:.25em;
 
   }
 }
@@ -1167,6 +1167,6 @@ Small screens - change to 1 column
   width: 100%;
   text-wrap: nowrap;
   white-space: nowrap;
-  padding: 0em .25em 0em .25em;
+  padding:.25em;
 }
 
