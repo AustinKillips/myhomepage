@@ -2005,6 +2005,12 @@ I'm all ears for whatever you care to share" required></textarea>
                             if (this.classList.contains('expanded')) {
                                 const randomRotation = Math.random() * 360; // 0 to 360 degrees
                                 this.style.setProperty('--random-rotation', `${randomRotation}deg`);
+
+                            // update url hash
+                                history.replacestate(null,null '#${sectionname}');
+                            }else{
+                            // remove hash when collapsed 
+                                history.replacestate(null,null window.location.pathname);    
                             }
                         }
                     
@@ -2021,6 +2027,23 @@ I'm all ears for whatever you care to share" required></textarea>
                         }
                     });
                 });
+
+                // automatically expand if hash is present 
+                const hash = window.location.hash.substring(1); // remove #
+                if (hash) {
+                    const header = document.querySelector('.section-header[data-section="${hash}"]';
+                    const content = document.getElementById('${hash}-content'):
+                    if (header && content) {
+                        headher.classList.add('expanded');
+                        content.classList.add('expanded');
+
+                        const randomRotation = Math.random() * 360;
+                        header.style.setProperty('--random-rotation', '${randomRotation}deg');
+
+                        // smooth scroll to section
+                        header.scrollIntoView({ behavior: 'smooth', block: 'start'});
+                    }
+                }
             });
 
             
