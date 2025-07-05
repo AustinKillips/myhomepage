@@ -1989,40 +1989,38 @@ I'm all ears for whatever you care to share" required></textarea>
             </section>
         
     <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                const sectionHeaders = document.querySelectorAll('.section-header');
-                
-                sectionHeaders.forEach(header => {
-                    header.addEventListener('click', function() {
-                        const sectionName = this.getAttribute('data-section');
-                        const content = document.getElementById(sectionName + '-content');
+document.addEventListener('DOMContentLoaded', function() {
+    const sectionHeaders = document.querySelectorAll('.section-header');
+    
+    sectionHeaders.forEach(header => {
+        header.addEventListener('click', function() {
+            const sectionName = this.getAttribute('data-section');
+            const content = document.getElementById(sectionName + '-content');
 
-                        
-                        if (content) {
-                            this.classList.toggle('expanded');
-                            content.classList.toggle('expanded');
-                            
-                            // Generate random rotation when expanding
-                            if (this.classList.contains('expanded')) {
-                                const randomRotation = Math.random() * 360; // 0 to 360 degrees
-                                this.style.setProperty('--random-rotation', ${randomRotation}deg);
-                            }
-                        }
-                    
-                    });
-                });
+            if (content) {
+                this.classList.toggle('expanded');
+                content.classList.toggle('expanded');
                 
-                // Keyboard support
-                sectionHeaders.forEach(header => {
-                    header.setAttribute('tabindex', '0');
-                    header.addEventListener('keydown', function(e) {
-                        if (e.key === 'Enter' || e.key === ' ') {
-                            e.preventDefault();
-                            this.click();
-                        }
-                    });
-                });
-            });
+                // Generate random rotation when expanding
+                if (this.classList.contains('expanded')) {
+                    const randomRotation = Math.random() * 360; // 0 to 360 degrees
+                    this.style.setProperty('--random-rotation', `${randomRotation}deg`);
+                }
+            }
+        });
+    });
+    
+    // Keyboard support
+    sectionHeaders.forEach(header => {
+        header.setAttribute('tabindex', '0');
+        header.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                this.click();
+            }
+        });
+    });
+});
             
             </script>
 
