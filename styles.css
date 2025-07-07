@@ -88,7 +88,7 @@ a:hover {
 .cv-container::before {
   content: "";
   position: absolute;
-  top: 22rem;
+  top: 20rem;
   bottom: 15rem;
   left: 3rem;
   width: 2px;
