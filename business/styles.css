@@ -50,6 +50,46 @@ body {
   background: #000;
 }
 .video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.custom-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  display: grid;
+  width: 72px;
+  height: 60px;
+  place-items: center;
+  padding: 0;
+  transform: translate(-50%, -50%);
+  border: 4px ridge #d4d0c8;
+  border-radius: 8px;
+  background: #08080e;
+  box-shadow: -5px 0 0 #00d8ff, 5px 0 0 #f00092, 0 7px 0 rgb(0 0 0 / 45%);
+  cursor: pointer;
+}
+.custom-play::after {
+  position: absolute;
+  inset: 3px;
+  background: repeating-linear-gradient(to bottom, transparent 0 3px, rgb(255 255 255 / 9%) 4px);
+  content: '';
+  pointer-events: none;
+}
+.custom-play span {
+  position: relative;
+  z-index: 1;
+  width: 0;
+  height: 0;
+  margin-left: 5px;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 24px solid #fff;
+  filter: drop-shadow(-2px 0 #00d8ff) drop-shadow(2px 0 #f00092);
+}
+.custom-play:active {
+  transform: translate(-50%, calc(-50% + 3px));
+  border-style: inset;
+  box-shadow: -3px 0 0 #00d8ff, 3px 0 0 #f00092;
+}
 .menu-buttons { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px; margin-top: 14px; }
 .menu-buttons a,
 .margin-links a,
