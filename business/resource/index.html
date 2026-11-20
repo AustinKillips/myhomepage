@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CX4E Resource</title>
+  <link rel="stylesheet" href="/business/styles.css">
+</head>
+<body>
+  <main class="site-shell">
+    <div class="wallpaper" aria-hidden="true"></div>
+    <section class="video-stage resource-stage" id="resourceStage">
+      <div class="video-frame resource-page-frame" id="resourceFrame">
+        <img id="resourceImage" alt="">
+        <div class="credits-page" id="creditsPage" hidden>
+          <article class="credit-card">
+            <div class="credit-copy">
+              <p><strong>Biscuit Wiscomb</strong> — CEO</p>
+              <p><strong>Bird Nord</strong> — Design Lead</p>
+            </div>
+          </article>
+          <article class="credit-card">
+            <div class="credit-copy">
+              <p><strong>Austin Killips</strong></p>
+              <p>Human Resources /<br>Virtual Environment Team Lead</p>
+            </div>
+          </article>
+        </div>
+      </div>
+      <h1 id="resourceTitle">Resource</h1>
+      <nav class="resource-page-nav" aria-label="Resource navigation">
+        <a href="/business/">&lt; Back to Onboarding</a>
+        <button id="nextImage" type="button" hidden>Next Image &gt;</button>
+      </nav>
+    </section>
+  </main>
+  <script>
+    const resources = {
+      'financial-prospectus': { title: 'Financial Prospectus', images: ['/business/assets/financial-prospectus.png'] },
+      'work-life-balance': { title: 'Work Life Balance', images: ['/business/assets/work-life.png'] },
+      'quarterly-goals': { title: 'Quarterly Goals', images: ['/business/assets/quarterly-goals.png'] },
+      'daily-motivation': { title: 'Daily Motivation', images: ['/business/assets/daily-motivation.png', '/business/assets/daily-motivation-2.png'] },
+      'litigation-outcome': { title: 'Litigation Outcome', images: ['/business/assets/litigation-outcome.png'] },
+      credits: { title: 'Credits', images: [] }
+    };
+    const key = new URLSearchParams(location.search).get('page') || 'financial-prospectus';
+    const resource = resources[key] || resources['financial-prospectus'];
+    const frame = document.getElementById('resourceFrame');
+    const image = document.getElementById('resourceImage');
+    const credits = document.getElementById('creditsPage');
+    const next = document.getElementById('nextImage');
+    let imageIndex = 0;
+    document.title = resource.title + ' — CX4E';
+    document.getElementById('resourceTitle').textContent = resource.title;
+    document.getElementById('resourceStage').setAttribute('aria-label', resource.title);
+    if (resource.images.length) {
+      image.src = resource.images[0];
+      image.alt = resource.title;
+      if (resource.images.length > 1) {
+        next.hidden = false;
+        next.addEventListener('click', () => {
+          imageIndex = (imageIndex + 1) % resource.images.length;
+          image.src = resource.images[imageIndex];
+          image.alt = resource.title + ', image ' + (imageIndex + 1);
+        });
+      }
+    } else {
+      image.hidden = true;
+      credits.hidden = false;
+      frame.classList.add('credits-frame');
+    }
+  </script>
+</body>
+</html>
