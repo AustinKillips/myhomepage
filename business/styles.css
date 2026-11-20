@@ -57,48 +57,33 @@ body {
   z-index: 2;
   display: grid;
   width: 78px;
-  height: 60px;
+  height: 54px;
   place-items: center;
   padding: 0;
   transform: translate(-50%, -50%);
   border: 4px outset #d4d0c8;
   border-radius: 0;
-  background: #a6a6a6;
+  background: #c0c0c0;
   box-shadow: 0 5px 0 rgb(0 0 0 / 42%);
   cursor: pointer;
 }
 .custom-play::after {
-  position: absolute;
-  inset: 6px 7px 17px;
-  border: 3px inset #bdbdbd;
-  background: repeating-linear-gradient(to bottom, #101410 0 3px, #1b241b 4px);
-  content: '';
-  pointer-events: none;
+  display: none;
 }
 .custom-play::before {
-  position: absolute;
-  right: 5px;
-  bottom: 2px;
-  left: 5px;
-  z-index: 3;
-  color: #ffd64a;
-  content: 'PLAY';
-  font: 700 8px/1 Arial, sans-serif;
-  letter-spacing: 2px;
-  text-align: center;
-  text-shadow: 1px 1px #554300;
+  display: none;
 }
 .custom-play span {
   position: relative;
   z-index: 2;
   width: 0;
   height: 0;
-  margin-top: -9px;
+  margin-top: 0;
   margin-left: 5px;
-  border-top: 11px solid transparent;
-  border-bottom: 11px solid transparent;
-  border-left: 18px solid #7cff53;
-  filter: drop-shadow(1px 1px #173c0d);
+  border-top: 14px solid transparent;
+  border-bottom: 14px solid transparent;
+  border-left: 23px solid #808080;
+  filter: drop-shadow(1px 1px #fff);
 }
 .custom-play:active {
   transform: translate(-50%, calc(-50% + 3px));
@@ -106,7 +91,7 @@ body {
   box-shadow: 0 2px 0 rgb(0 0 0 / 42%);
 }
 .custom-fullscreen { position: absolute; right: 8px; bottom: 8px; z-index: 3; display: grid; width: 48px; height: 44px; place-items: center; padding: 5px; border: 4px outset #d4d0c8; border-radius: 0; background: #c0c0c0; cursor: pointer; }
-.custom-fullscreen span { display: grid; width: 100%; height: 100%; place-items: center; border: 2px inset #d4d0c8; background: #000080; color: #fff; font: 700 25px/1 "Arial Black", Arial, sans-serif; }
+.custom-fullscreen img { display: block; width: 28px; height: 28px; object-fit: contain; }
 .custom-fullscreen:active { border-style: inset; }
 .menu-buttons { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px; margin-top: 14px; }
 .menu-buttons a,
