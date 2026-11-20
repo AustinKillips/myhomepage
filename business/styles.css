@@ -159,4 +159,9 @@ body {
   .margin-links { position: static; display: grid; width: 100%; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 16px; transform: none; }
   .margin-links a { height: auto; min-height: 48px; font-size: 11px; }
   .menu-buttons { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .credits-page { grid-template-columns: 1fr; align-content: center; gap: 48px; padding: 0 16px; }
+  .credit-copy,
+  .credit-card:first-child .credit-copy { min-height: 0; margin: 0 auto; padding: 0; }
+  .credit-card:first-child .credit-copy { width: min(239px, 100%); }
+  .credit-card:nth-child(2) .credit-copy { width: min(256px, 100%); }
 }
