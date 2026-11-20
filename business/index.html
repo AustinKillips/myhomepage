@@ -20,7 +20,8 @@
           referrerpolicy="strict-origin-when-cross-origin"
           title="CX4E Corporate Onboarding"
           allowfullscreen></iframe>
-        <button class="custom-play" id="customPlay" type="button" aria-label="Play onboarding video"><img src="/business/assets/vmp.png" alt="" aria-hidden="true"></button>
+        <button class="custom-play" id="customPlay" type="button" aria-label="Play onboarding video"><span aria-hidden="true"></span></button>
+        <button class="custom-fullscreen" id="customFullscreen" type="button" aria-label="View onboarding video fullscreen"><span aria-hidden="true">⛶</span></button>
       </div>
       <nav class="margin-links" aria-label="External links">
         <a href="https://runsignup.com/Race/IL/Chicago/CrossIs4Everyone?ref=cx4everyone.com" target="_blank" rel="noreferrer">Register Here</a>
@@ -40,6 +41,9 @@
     document.getElementById('customPlay').addEventListener('click', function () {
       document.getElementById('onboarding-video').contentWindow.postMessage({ method: 'play' }, 'https://player.vimeo.com');
       this.hidden = true;
+    });
+    document.getElementById('customFullscreen').addEventListener('click', function () {
+      document.getElementById('onboarding-video').requestFullscreen();
     });
   </script>
 </body>

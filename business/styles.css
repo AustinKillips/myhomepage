@@ -105,17 +105,9 @@ body {
   border-style: inset;
   box-shadow: 0 2px 0 rgb(0 0 0 / 42%);
 }
-.custom-play {
-  width: 78px;
-  height: 78px;
-  border: 0;
-  background: transparent;
-  box-shadow: 0 5px 8px rgb(0 0 0 / 38%);
-}
-.custom-play::before,
-.custom-play::after { display: none; }
-.custom-play img { display: block; width: 100%; height: 100%; object-fit: contain; }
-.custom-play:active { border: 0; box-shadow: 0 2px 4px rgb(0 0 0 / 35%); }
+.custom-fullscreen { position: absolute; right: 8px; bottom: 8px; z-index: 3; display: grid; width: 48px; height: 44px; place-items: center; padding: 5px; border: 4px outset #d4d0c8; border-radius: 0; background: #c0c0c0; cursor: pointer; }
+.custom-fullscreen span { display: grid; width: 100%; height: 100%; place-items: center; border: 2px inset #d4d0c8; background: #000080; color: #fff; font: 700 25px/1 "Arial Black", Arial, sans-serif; }
+.custom-fullscreen:active { border-style: inset; }
 .menu-buttons { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px; margin-top: 14px; }
 .menu-buttons a,
 .margin-links a,
